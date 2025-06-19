@@ -6,7 +6,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
     }
 
     try {
-        await conn.reply(m.chat, `❏ enviando su video! Espere un momento por favor...`, m);
+        await conn.reply(m.chat, `❏ ¡enviando su video! Espere un momento por favor...`, m);
 
         const tiktokData = await tiktokdl(args[0]);
 
@@ -20,14 +20,14 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
             const { title, author, duration } = tiktokData.data;
 
             const info = `
-╭─────💖─────╮
+╭──────────╮
 │ *🎬 Título:* ${title || 'No disponible'}
 │ *👤 Autor:* ${author || 'Desconocido'}
 │ *⏱ Duración:* ${duration ? duration + 's' : 'Desconocida'}
-╰─────💖─────╯
+╰──────────╯
 `;
 
-            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n✨ ¡Aquí tienes tu video con poder Pikachu!\n⚡ ¡Atrápalo ya!`, m);
+            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n✨ ¡Aquí tienes tu video de tiktok!\n⚡ ¡Atrápalo ya!`, m);
         } else {
             return conn.reply(m.chat, "❌ No se pudo descargar el video. Inténtalo más tarde.", m);
         }
