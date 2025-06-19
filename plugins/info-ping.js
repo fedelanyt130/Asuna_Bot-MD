@@ -12,10 +12,10 @@ let handler = async (m, { conn }) => {
 
     const pikachuPing = `
 ╭━━━⊰  *ASUNA BOT*  ⊱━━━╮
-┃ ⚡ *Estado:* ¡Activo y cargado! ⚡
+┃ 💖 *Estado:* ¡Activo y cargado! 
 ┃ 🕒 *Velocidad:* ${latensi.toFixed(4)} ms
 ┃ 🧃 *Subbots:* ${users.length}
-╰━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     conn.reply(m.chat, pikachuPing, fkontak, rcanal);
