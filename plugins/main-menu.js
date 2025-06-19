@@ -87,7 +87,7 @@ ${readMore}
 
     menuText += `\n\n*👑 © 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 𝗳𝗲𝗱𝗲𝗹𝗮𝗻𝗬𝗧 🖥️ - ${botname}*`
 
-    const imageUrl = 'https://files.catbox.moe/h1eizu.jpg'
+    const imageUrl = 'https://files.catbox.moe/zoharb.jpg'
     await m.react('💖')
 
     await conn.sendMessage(m.chat, {
