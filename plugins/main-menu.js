@@ -69,8 +69,8 @@ let handler = async (m, { conn }) => {
 │ ⏱️ *Tiempo activo:* ${uptime}
 │ 💾 *Comandos:* ${totalCommands}
 │ 🤖 *Sub-Bots activos:* ${users.length}
-╰═════════════════════════╯
-🎮 *📋 COMANDOS DISPONIBLES 📋* ⚡
+╰═════════════════════╯
+✨ *LISTA DE COMANDOS* ✨
 ${readMore}
 `
 
@@ -82,7 +82,7 @@ ${readMore}
       menuText += comandos.map(menu => menu.help.map(cmd =>
         `│ ✦ ${cmd}${menu.limit ? ' ◜💙◞' : ''}${menu.premium ? ' ◜🪪◞' : ''}`
       ).join('\n')).join('\n')
-      menuText += `\n╰───────────────────────╯`
+      menuText += `\n╰───────────────────╯`
     }
 
     menuText += `\n\n*👑 © 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 𝗳𝗲𝗱𝗲𝗹𝗮𝗻𝗬𝗧 🖥️ - ${botname}*`
