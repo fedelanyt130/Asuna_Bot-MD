@@ -11,11 +11,11 @@ let handler = async (m, { conn }) => {
     let sysinfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
 
     const pikachuPing = `
-╭━━━⊰ ⚡ *Pikachu-Bot* ⚡ ⊱━━━╮
+╭━━━⊰  *ASUNA BOT*  ⊱━━━╮
 ┃ ⚡ *Estado:* ¡Activo y cargado! ⚡
 ┃ 🕒 *Velocidad:* ${latensi.toFixed(4)} ms
 ┃ 🧃 *Subbots:* ${users.length}
-╰━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
     conn.reply(m.chat, pikachuPing, fkontak, rcanal);
