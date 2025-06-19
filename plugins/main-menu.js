@@ -61,7 +61,7 @@ let handler = async (m, { conn }) => {
     }))
 
     let menuText = `
-╭══〔 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 〕══╮
+╭══❒〔 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 〕══❒
 │ 🧃 *Usuario:* @${userId.split('@')[0]}
 │ ⚡ *Tipo:* ${(conn.user.jid === global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
 │ 🌐 *Modo actual:* ${mode}
@@ -69,7 +69,7 @@ let handler = async (m, { conn }) => {
 │ ⏱️ *Tiempo activo:* ${uptime}
 │ 💾 *Comandos:* ${totalCommands}
 │ 🤖 *Sub-Bots activos:* ${users.length}
-╰═════════════════╯
+╰═════════════════❒
 ✨ *LISTA DE COMANDOS* ✨
 ${readMore}
 `
