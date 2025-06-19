@@ -61,14 +61,14 @@ let handler = async (m, { conn }) => {
     }))
 
     let menuText = `
-╭══❒〔 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 〕══❒
-│ 🧃 *Usuario:* @${userId.split('@')[0]}
-│ ⚡ *Tipo:* ${(conn.user.jid === global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│ 🌐 *Modo actual:* ${mode}
-│ 👥 *Usuarios registrados:* ${totalreg}
-│ ⏱️ *Tiempo activo:* ${uptime}
-│ 💾 *Comandos:* ${totalCommands}
-│ 🤖 *Sub-Bots activos:* ${users.length}
+╭══❒『 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 』
+┃ 🧃 *Usuario:* @${userId.split('@')[0]}
+┃ ⚡ *Tipo:* ${(conn.user.jid === global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+┃ 🌐 *Modo actual:* ${mode}
+┃ 👥 *Usuarios registrados:* ${totalreg}
+┃ ⏱️ *Tiempo activo:* ${uptime}
+┃ 💾 *Comandos:* ${totalCommands}
+┃ 🤖 *Sub-Bots activos:* ${users.length}
 ╰═════════════════❒
 ✨ *LISTA DE COMANDOS* ✨
 ${readMore}
@@ -88,7 +88,7 @@ ${readMore}
     menuText += `\n\n*👑 © 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 𝗳𝗲𝗱𝗲𝗹𝗮𝗻𝗬𝗧 🖥️ - ${botname}*`
 
     const imageUrl = 'https://files.catbox.moe/h1eizu.jpg'
-    await m.react('👑')
+    await m.react('💖')
 
     await conn.sendMessage(m.chat, {
       text: menuText,
