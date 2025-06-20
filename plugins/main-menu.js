@@ -12,7 +12,7 @@ const textCyberpunk = (text) => {
 
 let tags = {
   'main': textCyberpunk('sistema'),
-  'creador': textCyberpunk('creador'),
+  'group': textCyberpunk('grupos'),
   'serbot': textCyberpunk('sub bots'),
 }
 
@@ -104,7 +104,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       caption: text,
       footer: 'ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ',
       buttons: [
-        { buttonId: `${_p}owner`, buttonText: { displayText: '🌐 ＧＲＵＰＯＳ' }, type: 1 },
+        { buttonId: `${_p}grupos`, buttonText: { displayText: '🌐 ＧＲＵＰＯＳ' }, type: 1 },
         { buttonId: `${_p}code`, buttonText: { displayText: '🕹 ＳＥＲＢＯＴ' }, type: 1 }
       ],
       viewOnce: true
@@ -127,4 +127,4 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
-      }
+  }
