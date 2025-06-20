@@ -52,7 +52,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.welcome) {
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
       let bienvenida = `
-*💖─『 𝑩𝑰𝑬𝑵𝑽𝑬𝑵𝑰𝑫𝑶/𝑨 』─✨*
+*💖─『 ʙɪᴇɴᴠᴇɴɪᴅᴏ/ᴀ 』─✨*
 👤 *Usuario:* ${taguser}
 🌍 *País:* ${pais}
 💬 *Grupo:* *${groupMetadata.subject}*
@@ -73,9 +73,9 @@ export async function before(m, { conn, participants, groupMetadata }) {
       m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
     ) {
       let despedida = `
-*💖──『 𝑫𝑬𝑺𝑷𝑬𝑫𝑰𝑫𝑨 』──✨*
+*💖──『 ʜᴀꜱᴛᴀ ʟᴜᴇɢᴏ 』──✨*
 👤 *Usuario:* ${taguser}
-🌍 *País:* ${pais}
+🌏 *país:* ${pais}
 💬 *Grupo:* *${groupMetadata.subject}*
 👥 *Miembros:* *${totalMembers - 1}*
 📅 *Fecha:* *${date}*
