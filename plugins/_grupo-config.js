@@ -17,7 +17,7 @@ return conn.reply(m.chat,`🟢✨ *¡El grupo ha sido abierto, todos pueden habl
 }
 
 if (isClose === 'announcement'){
-return conn.reply(m.chat, `🔒⚠️ *¡Solo los entrenadores admins pueden hablar en este grupo.*`, m, rcanal)
+return conn.reply(m.chat, `🔒⚠️ *¡Solo los admins pueden hablar en este grupo.*`, m, rcanal)
 }}
 handler.help = ['group open / close', 'grupo on / off']
 handler.tags = ['grupo']
