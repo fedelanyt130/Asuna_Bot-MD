@@ -39,8 +39,6 @@ var handler = async (m, { conn }) => {
 ❀  *N᥆mᑲrᥱ:* ${username}
 ❖  *Eძᥲძ:* ${age}
 ⚥  *Gᥱᥒᥱr᥆:* ${genre}
-❀  *Cᥙm⍴ᥣᥱᥲᥒ̃᥆s:* ${birth} 
-♡  *Cᥲsᥲძ@:* ${isMarried ? partnerName : 'Nadie'}
 ✎  *Dᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
 ❍  *Rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
