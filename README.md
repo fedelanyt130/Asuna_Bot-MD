@@ -1,3 +1,7 @@
+<img src= "https://files.catbox.moe/eyxsoy.jpg">
+    </p>
+
+
 ## ⚘ `INSTALACIÓN X TERMUX`
 
 ```
