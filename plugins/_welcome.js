@@ -39,7 +39,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   let frasesBienvenida = [
     "¡hola! Bienvenido al grupo.",
-    "Bienvenido al grupo, ¡que empiece la aventura de los bots!"
+    "Bienvenido al grupo, ¡que empiece la aventura de los bots!",
   ];
   let frasesDespedida = [
     "Adiós nos vemos",
@@ -52,7 +52,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.welcome) {
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
       let bienvenida = `
-*💖─『 ʙɪᴇɴᴠᴇɴɪᴅᴏ/ᴀ 』─✨*
+*✩─『 ʙɪᴇɴᴠᴇɴɪᴅᴏ/ᴀ 』─✩*
 👤 *Usuario:* ${taguser}
 🌍 *País:* ${pais}
 💬 *Grupo:* *${groupMetadata.subject}*
@@ -73,7 +73,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
       m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
     ) {
       let despedida = `
-*💖──『 ʜᴀꜱᴛᴀ ʟᴜᴇɢᴏ 』──✨*
+*✩──『 ʜᴀꜱᴛᴀ ʟᴜᴇɢᴏ 』──✩*
 👤 *Usuario:* ${taguser}
 🌏 *país:* ${pais}
 💬 *Grupo:* *${groupMetadata.subject}*
