@@ -46,12 +46,12 @@ global.jadi = 'JadiBots';
 global.pikaJadibts = true;
 
 // ✨ DATOS DE ESTILO Y METADATOS
-global.packname = '🍀 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 ✨';
-global.botname = '💖 𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 💖';
-global.wm = '𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 ✨';
-global.dev = '© 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 𝗳𝗲𝗱𝗲𝗹𝗮𝗻𝗬𝗧';
-global.textbot = '𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜  • 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 𝗳𝗲𝗱𝗲𝗹𝗮𝗻𝗬𝗧';
-global.etiqueta = '𝗔𝗦𝗨𝗡𝗔𝗕𝗢𝗧-𝗔𝗜 ✨';
+global.packname = '🍀 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
+global.botname = '💖 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ⚘';
+global.wm = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
+global.dev = '© ᴄʀᴇᴀᴅᴏ x ꜰᴇᴅᴇ ⚘';
+global.textbot = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ  • ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜰᴇᴅᴇʟᴀɴʏ';
+global.etiqueta = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
 
 // 💰 MONEDA Y AVATARES
 global.moneda = 'pikas';
