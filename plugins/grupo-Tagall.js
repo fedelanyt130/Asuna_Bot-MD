@@ -59,11 +59,11 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
     const info = mensaje ? `╰➤ ✉️ *Mensaje:* ${mensaje}` : "╰➤ ⚠️ *Invocación general*";
 
     let texto = `
-╭══ *LLAMADO A TODOS* ══⬣
-│  🧃 *Total:* ${participants.length}
-│  ⚡ *Grupo:* ${await conn.getName(m.chat)}
+╭══ *LLAMADO A TODOS* ══✩
+│  ✩ *Total:* ${participants.length}
+│  ✩ *Grupo:* ${await conn.getName(m.chat)}
 ${info}
-╰═══⬣\n`;
+╰═══✩\n`;
 
     for (const miembro of participants) {
         const number = miembro.id.split('@')[0];
@@ -72,7 +72,7 @@ ${info}
         texto += `┃ ${flag} @${number}\n`;
     }
 
-    texto += `╰══⬣\n✨ *${dev}* ⚔️`;
+    texto += `╰══⬣\n✨ *${dev}* 💖`;
 
     conn.sendMessage(m.chat, {
         text: texto.trim(),
