@@ -1,50 +1,98 @@
-let WAMessageStubType = (await import('@whiskeysockets/baileys')).default;
-import fetch from 'node-fetch';
+//© código creado por Deylin 
+//https://github.com/Deylin-eliac 
+//➤  no quites creditos 
 
-export async function before(m, { conn, participants, groupMetadata }) {
-  if (!m.messageStubType || !m.isGroup) return true;
+import { WAMessageStubType } from '@whiskeysockets/baileys'
 
-    let vn = 'https://qu.ax/Deuut.mp3';
-  let vn2 = 'https://qu.ax/OzTbp.mp3';
-  let chat = global.db.data.chats[m.chat];
-  const getMentionedJid = () => {
-    return m.messageStubParameters.map(param => `${param}@s.whatsapp.net`);
-  };
+const paises = {
+  "1": "🇺🇸 Estados Unidos", "34": "🇪🇸 España", "52": "🇲🇽 México", "54": "🇦🇷 Argentina",
+  "55": "🇧🇷 Brasil", "56": "🇨🇱 Chile", "57": "🇨🇴 Colombia", "58": "🇻🇪 Venezuela",
+  "591": "🇧🇴 Bolivia", "593": "🇪🇨 Ecuador", "595": "🇵🇾 Paraguay", "598": "🇺🇾 Uruguay",
+  "502": "🇬🇹 Guatemala", "503": "🇸🇻 El Salvador", "504": "🇭🇳 Honduras", "505": "🇳🇮 Nicaragua",
+  "506": "🇨🇷 Costa Rica", "507": "🇵🇦 Panamá", "51": "🇵🇪 Perú", "53": "🇨🇺 Cuba", "91": "🇮🇳 India"
+};
 
-  let who = m.messageStubParameters[0] + '@s.whatsapp.net';
-  let user = global.db.data.users[who];
-
-  let userName = user ? user.name : await conn.getName(who);
-
- if (chat.welcome && m.messageStubType === 27) {
-    this.sendMessage(m.chat, { audio: { url: vn }, 
-    contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: "120363358338732714@newsletter",
-    serverMessageId: '', 
-    newsletterName: '─͟͞̟𝑴𝒆𝒈𝒖͜𝒎͜𝒊𝒏-𝑩͜𝒐𝒕-𝑴𝑫͟͞─' }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ｗ Ｅ Ｌ Ｃ Ｏ Ｍ Ｅ ͟͞  `, 
-    "body": `${userName}`, 
-    "previewType": "PHOTO", 
-    "thumbnailUrl": null,
-    "thumbnail": icons, 
-    "sourceUrl": redes, 
-    "showAdAttribution": true}}, 
-     seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+function obtenerPais(numero) {
+  let num = numero.replace("@s.whatsapp.net", "");
+  let codigo = Object.keys(paises).find(pref => num.startsWith(pref));
+  return paises[codigo] || "🌐 Desconocido";
 }
 
-  if (chat.welcome && (m.messageStubType === 28 || m.messageStubType === 32)) {
-    this.sendMessage(m.chat, { audio: { url: vn2 }, 
-    contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: "120363358338732714@newsletter",
-    serverMessageId: '', 
-    newsletterName: '─͟͞̟𝑴𝒆𝒈𝒖͜𝒎͜𝒊𝒏-𝑩͜𝒐𝒕-𝑴𝑫͟͞─' }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ａ Ｄ Ｉ Ｏ Ｓ ͟͞  `, 
-    "body": `${userName}, se despide.`, 
-    "previewType": "PHOTO", 
-    "thumbnailUrl": null,
-    "thumbnail": icons, 
-    "sourceUrl": redes, 
-    "showAdAttribution": true}}, 
-     seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+export async function before(m, { conn, participants, groupMetadata }) {
+  if (!m.messageStubType || !m.isGroup) return;
+  if (m.chat === "120363402481697721@g.us") return;
+
+  let who = m.messageStubParameters[0];
+  let taguser = `@${who.split("@")[0]}`;
+  let chat = global.db.data.chats[m.chat];
+  let totalMembers = participants.length;
+  let date = new Date().toLocaleString("es-ES", { timeZone: "America/Mexico_City" });
+
+  let pais = obtenerPais(who);
+  let ppUser = 'https://files.catbox.moe/h1eizu.jpg';
+
+  try {
+    ppUser = await conn.profilePictureUrl(who, 'image');
+  } catch (e) {
+    
   }
-                  }
+
+  let frasesBienvenida = [
+    "¡Pika Pika! Bienvenido al grupo.",
+    "¡Un rayo de energía ha llegado al grupo!",
+    "Pikachu dice que este grupo ahora es 100% más eléctrico ⚡",
+    "¡Esperamos que la pases genial, entrenador!",
+    "Bienvenido al equipo, ¡que empiece la aventura Pokémon!"
+  ];
+  let frasesDespedida = [
+    "Pikachu te dice adiós con una descarga de cariño.",
+    "Otro entrenador deja el grupo... ¡Buena suerte!",
+    "¡Hasta la próxima, no olvides tus Pokéballs!",
+    "El grupo se queda con menos voltaje ⚡",
+    "Pikachu te extrañará 🥺"
+  ];
+
+  let fraseRandomBienvenida = frasesBienvenida[Math.floor(Math.random() * frasesBienvenida.length)];
+  let fraseRandomDespedida = frasesDespedida[Math.floor(Math.random() * frasesDespedida.length)];
+
+  if (chat.welcome) {
+    if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
+      let bienvenida = `
+*💖─『 𝑩𝑰𝑬𝑵𝑽𝑬𝑵𝑰𝑫𝑶/𝑨 』─✨*
+👤 *Usuario:* ${taguser}
+🌍 *País:* ${pais}
+💬 *Grupo:* *${groupMetadata.subject}*
+👥 *Miembros:* *${totalMembers + 1}*
+📅 *Fecha:* *${date}*
+⚡ *Mensaje:* ${fraseRandomBienvenida}
+      `.trim();
+
+      await conn.sendMessage(m.chat, {
+        image: { url: ppUser },
+        caption: bienvenida,
+        mentions: [who]
+      });
+    }
+
+    if (
+      m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
+      m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
+    ) {
+      let despedida = `
+*💖──『 𝑫𝑬𝑺𝑷𝑬𝑫𝑰𝑫𝑨 』──✨*
+👤 *Usuario:* ${taguser}
+🌍 *País:* ${pais}
+💬 *Grupo:* *${groupMetadata.subject}*
+👥 *Miembros:* *${totalMembers - 1}*
+📅 *Fecha:* *${date}*
+⚡ *Mensaje:* ${fraseRandomDespedida}
+      `.trim();
+
+      await conn.sendMessage(m.chat, {
+        image: { url: ppUser },
+        caption: despedida,
+        mentions: [who]
+      });
+    }
+  }
+}
