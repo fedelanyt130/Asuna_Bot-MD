@@ -4,8 +4,8 @@ import fetch from 'node-fetch';
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return true;
 
-    let vn = 'https://qu.ax/Deuut.mp3';
-  let vn2 = 'https://qu.ax/OzTbp.mp3';
+  let vn = 'https://qu.ax/Jinc.mp3';
+  let vn2 = 'https://qu.ax/ujpr.mp3';
   let chat = global.db.data.chats[m.chat];
   const getMentionedJid = () => {
     return m.messageStubParameters.map(param => `${param}@s.whatsapp.net`);
@@ -19,10 +19,10 @@ export async function before(m, { conn, participants, groupMetadata }) {
  if (chat.welcome && m.messageStubType === 27) {
     this.sendMessage(m.chat, { audio: { url: vn }, 
     contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: "120363420017244077@newsletter",
+    newsletterJid: channelRD.id, 
     serverMessageId: '', 
-    newsletterName: '─͟͞̟𝑴𝒆𝒈𝒖͜𝒎͜𝒊𝒏-𝑩͜𝒐𝒕-𝑴𝑫͟͞─' }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ｗ Ｅ Ｌ Ｃ Ｏ Ｍ Ｅ ͟͞  `, 
+    newsletterName: channelRD.name }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
+    "title":`♡︎✿︎𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘ꨄ︎ఌ︎`, 
     "body": `${userName}`, 
     "previewType": "PHOTO", 
     "thumbnailUrl": null,
@@ -35,10 +35,10 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.welcome && (m.messageStubType === 28 || m.messageStubType === 32)) {
     this.sendMessage(m.chat, { audio: { url: vn2 }, 
     contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: "120363420017244077@newsletter",
+    newsletterJid: channelRD.id, 
     serverMessageId: '', 
-    newsletterName: '─͟͞̟𝑴𝒆𝒈𝒖͜𝒎͜𝒊𝒏-𝑩͜𝒐𝒕-𝑴𝑫͟͞─' }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ａ Ｄ Ｉ Ｏ Ｓ ͟͞  `, 
+    newsletterName: channelRD.name }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
+    "title": `❀☹︎𝙰𝚍𝚒𝚘𝚜☹︎☯︎`, 
     "body": `${userName}, se despide.`, 
     "previewType": "PHOTO", 
     "thumbnailUrl": null,
@@ -47,4 +47,4 @@ export async function before(m, { conn, participants, groupMetadata }) {
     "showAdAttribution": true}}, 
      seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
   }
-}
+      }
