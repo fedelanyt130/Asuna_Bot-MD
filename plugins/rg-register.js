@@ -84,10 +84,10 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 thumbnailUrl: 'https://files.catbox.moe/g8izji.jpg' }}}, {quoted: m})
 */
 let chtxt = `👤 *𝚄𝚜𝚎𝚛* » ${m.pushName || 'Anónimo'}
-🗂ᮢ⃘ᩙ *𝚅𝚎𝚛𝚒𝚏𝚒𝚌𝚊𝚌𝚒𝚘́𝚗* » ${user.name}
-🍨ᮢ⃘ᩙ *𝙴𝚍𝚊𝚍* » ${user.age} años
-⌨️ᮢ⃘ᩙ *𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘𝚗* » ${user.descripcion}
-🍭ᮢ⃘ᩙ *𝙽𝚞𝚖𝚎𝚛𝚘 𝚍𝚎 𝚛𝚎𝚐𝚒𝚜𝚝𝚛𝚘* »
+🗂 *𝚅𝚎𝚛𝚒𝚏𝚒𝚌𝚊𝚌𝚒𝚘́𝚗* » ${user.name}
+🍨 *𝙴𝚍𝚊𝚍* » ${user.age} años
+⌨️ *𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘𝚗* » ${user.descripcion}
+🍭 *𝙽𝚞𝚖𝚎𝚛𝚘 𝚍𝚎 𝚛𝚎𝚐𝚒𝚜𝚝𝚛𝚘* »
 ⤷ ${sn}`;
 
     let channelID = '120363402097425674@newsletter';
