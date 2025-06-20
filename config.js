@@ -63,11 +63,11 @@ global.photoSity = [catalogo]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/F8KwM3rVqkS9HhR5msoRqQ'
-global.channel2 = 'https://whatsapp.com/channel/0029VayQwPsFnSzESZJ9Us3z'
+global.gp1 = 'https://chat.whatsapp.com/KPbFD3ONgiY1OB2YJ5SDUt'
+global.channel2 = 'https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31'
 global.md = 'https://github.com/Deylin-Eliac/Pikachu-bot'
 global.correo = 'deylibaquedano801@gmail.com'
-global.cn ='https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m';
+global.cn ='https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
