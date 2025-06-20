@@ -30,8 +30,6 @@ const defaultMenu = {
 │ ⏱ 𝗧𝗜𝗘𝗠𝗣𝗢 𝗔𝗖𝗧𝗜𝗩𝗢: %muptime
 ╰──────────────❒
 
-> Si deseas ser parte del bot usa *#code* o *#Qr*
-
 %readmore
 `.trimStart(),
 
