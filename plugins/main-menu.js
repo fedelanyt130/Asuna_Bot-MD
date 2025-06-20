@@ -18,15 +18,15 @@ let tags = {
 
 const defaultMenu = {
   before: `🖥️ *INFO - BOT* 🖥️ 
-❒ *𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* %name
-❒ *𝙼𝙾𝙳𝙾:* %mode
+❒ *TIEMPO:* ACTIVO:* %muptime
+❒ *MODE:* %mode
 ❒ *MODO:* » ${(conn.user.jid == global.conn.user.jid ? '`PRINCIPAL`' : '`SUB-BOT`')}
 
 ─『 𝗘𝗦𝗧𝗔𝗗𝗢 𝗗𝗘 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 』─
 ❒ 📊 *NIVEL:* %level
 ❒ ⚡ *EXP:* %exp / %maxexp
-❒ 👤 *USUARIO:* %totalreg
-❒ ⏱ *TIEMPO ACTIVO:* %muptime
+❒ 👥 *USUARIOS:* %totalreg
+❒ 👤 *USUARIO:* %name
 
 %readmore
 `.trimStart(),
