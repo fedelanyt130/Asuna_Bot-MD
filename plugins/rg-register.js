@@ -45,10 +45,10 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     let regbot = `╭─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╮
 ╭╼ REGISTROADO/A
 ┃֪࣪╰─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╯\n`
-    regbot += `✩.･*:｡≻──⋆♡⋆──.*:｡✩\n`
+    regbot += `✩≻──⋆♡⋆──✩\n`
     regbot += `*Nombre:* ${name}\n`
     regbot += `*Edad:* ${age} años\n`
-    regbot += `✩.･*:｡≻──⋆♡⋆──.*:｡✩\n`
+    regbot += `✩≻──⋆♡⋆──✩\n`
     regbot += `*RECOMPENSAS:*\n> `
     regbot += `15 Estrellas 🌟\n> `
     regbot += `5 AsunaCoins 🪙\n> `
