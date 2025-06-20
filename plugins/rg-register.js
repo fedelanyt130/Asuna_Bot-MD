@@ -43,17 +43,17 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     
     let sn = createHash('md5').update(m.sender).digest('hex')
     let regbot = `╭─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╮
-╭╼✦ 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢 ✦ 
+╭╼ REGISTROADO/A
 ┃֪࣪╰─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╯\n`
-    regbot += `•✩.･*:｡≻──⋆♡⋆───.•*:｡✩•\n`
-    regbot += `*🩵ᮢ⃘ᩙ𑰴 𝐍𝐨𝐦𝐛𝐫𝐞:* ${name}\n`
-    regbot += `*🩵ᮢ⃘ᩙ𑰴 𝐄𝐝𝐚𝐝:* ${age} años\n`
-    regbot += `•✩.･*:｡≻──⋆♡⋆───.•*:｡✩•\n`
-    regbot += `*「💙」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:*\n> `
-    regbot += `• 15 Estrellas 🌟\n> `
-    regbot += `• 5 AsunaCoins 🪙\n> `
-    regbot += `• 245 Experiencia 💸\n> `
-    regbot += `• 12 Tokens 💰\n`
+    regbot += `✩.･*:｡≻──⋆♡⋆──.*:｡✩\n`
+    regbot += `*Nombre:* ${name}\n`
+    regbot += `*Edad:* ${age} años\n`
+    regbot += `✩.･*:｡≻──⋆♡⋆──.*:｡✩\n`
+    regbot += `*RECOMPENSAS:*\n> `
+    regbot += `15 Estrellas 🌟\n> `
+    regbot += `5 AsunaCoins 🪙\n> `
+    regbot += `245 Experiencia 💸\n> `
+    regbot += `12 Tokens 💰\n`
     regbot += `*⸽ ͜ ֟፝͝ ⃨͜ ⸽ ͜ ֟፝͝ ⃨͜ ⸽᮫᷼  ͜ ໍ ᷼ᮬ࣪  ׅ 🩵ຼິ͙͙〫 ׅ  ࣪᷼  ͜  ᷼ᮬ᮫ ໍ⸽ ͜ ֟፝͝ ⃨͜ ⸽ ͜ ֟፝͝ ⃨͜ ⸽*\n> `
     regbot += `🍫 Usᥲ *#perfil* ⍴ᥲrᥲ ᥎ᥱr 𝗍ᥙ ⍴ᥱr𝖿іᥣ.`
 
