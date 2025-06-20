@@ -6,7 +6,7 @@
 import PhoneNumber from 'awesome-phonenumber';
 
 let handler = async (m, { conn }) => {
-  m.react('🧃');
+  m.react('👤');
   
 const imageUrl = 'https://files.catbox.moe/hmvsyj.jpg'
   const numCreador = '5491156178758';
