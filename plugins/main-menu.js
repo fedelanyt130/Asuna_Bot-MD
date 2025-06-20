@@ -23,10 +23,10 @@ const defaultMenu = {
 ❒ *MODO:* » ${(conn.user.jid == global.conn.user.jid ? '`PRINCIPAL`' : '`SUB-BOT`')}
 
 ───『 𝗘𝗦𝗧𝗔𝗗𝗢 𝗗𝗘 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 』───
-❒ 📊 𝗡𝗜𝗩𝗘𝗟: &level
-❒ ⚡ 𝗘𝗫𝗣: %exp / %maxexp
-❒ 👤 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦: %totalreg
-❒ ⏱ 𝗧𝗜𝗘𝗠𝗣𝗢 𝗔𝗖𝗧𝗜𝗩𝗢: %muptime
+❒ 📊 *NIVEL:* %level
+❒ ⚡ *EXP:* %exp / %maxexp
+❒ 👤 *USUARIO:* %totalreg
+❒ ⏱ *TIEMPO ACTIVO:* %muptime
 
 %readmore
 `.trimStart(),
