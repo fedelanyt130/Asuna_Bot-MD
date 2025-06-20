@@ -12,7 +12,7 @@ const textCyberpunk = (text) => {
 
 let tags = {
   'main': textCyberpunk('sistema'),
-  'group': textCyberpunk('grupos'),
+  'creador': textCyberpunk('creador'),
   'serbot': textCyberpunk('sub bots'),
 }
 
