@@ -12,7 +12,7 @@ const imageUrl = 'https://files.catbox.moe/hmvsyj.jpg'
   const numCreador = '5491156178758';
   const ownerJid = numCreador + '@s.whatsapp.net';
   const name = await conn.getName(ownerJid) || 'Fede';
-  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `Hola, Soy fede.`;
+  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `һ᥆ᥣᥲ¡ s᥆ᥡ 𝖿ᥱძᥱ mᥙᥴһ᥆ gᥙs𝗍᥆.`;
   const empresa = 'fede - Servicios Tecnológicos';
 
   const vcard = `
