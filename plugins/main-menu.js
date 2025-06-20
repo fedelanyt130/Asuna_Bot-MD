@@ -104,7 +104,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       caption: text,
       footer: 'ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ',
       buttons: [
-        { buttonId: `${_p}grupos`, buttonText: { displayText: '🌐 ＧＲＵＰＯＳ' }, type: 1 },
+        { buttonId: `${_p}owner`, buttonText: { displayText: '🌐 ＧＲＵＰＯＳ' }, type: 1 },
         { buttonId: `${_p}code`, buttonText: { displayText: '🕹 ＳＥＲＢＯＴ' }, type: 1 }
       ],
       viewOnce: true
