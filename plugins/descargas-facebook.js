@@ -1,6 +1,3 @@
-// editado y adaptado por
-// https://github.com/fedelanyt130
-
 import { igdl } from 'ruhend-scraper'
 
 const handler = async (m, { text, conn, args }) => {
