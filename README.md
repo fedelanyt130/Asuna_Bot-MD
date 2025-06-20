@@ -1,4 +1,4 @@
-⚘ INSTALACIÓN X TERMUX
+## ⚘ `INSTALACIÓN X TERMUX`
 
 ```
 termux-setup-storage
