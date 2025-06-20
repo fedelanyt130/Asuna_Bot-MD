@@ -101,7 +101,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     await conn.sendMessage(m.chat, {
       image: { url: 'https://files.catbox.moe/2ywuju.jpg' },
       caption: text,
-      footer: '💖 ASUNA BOT X WHATSAPP ✨',
+      footer: 'ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ',
       buttons: [
         { buttonId: `${_p}grupos`, buttonText: { displayText: '🌐 ＧＲＵＰＯＳ' }, type: 1 },
         { buttonId: `${_p}code`, buttonText: { displayText: '🕹 ＳＥＲＢＯＴ' }, type: 1 }
