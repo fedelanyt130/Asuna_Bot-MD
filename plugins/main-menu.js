@@ -24,7 +24,6 @@ const defaultMenu = {
 ╰─❒ 𝗔𝗦𝗨𝗡𝗔 – 𝗕𝗢𝗧 ❒─╯
 
 ╭─❒「 𝗘𝗦𝗧𝗔𝗗𝗢 𝗗𝗘 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 」
-│ 🏷 COMANDOS: ${totalCommands}
 │ 📊 𝗡𝗜𝗩𝗘𝗟: ${level}
 │ ⚡ 𝗘𝗫𝗣: %exp / %maxexp
 │ 👤 𝗨𝗦𝗨𝗔𝗥𝗜𝗢𝗦: %totalreg
