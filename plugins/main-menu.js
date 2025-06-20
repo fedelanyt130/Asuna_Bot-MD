@@ -28,6 +28,7 @@ const defaultMenu = {
 ❒ *USUARIOS:* %totalreg
 ❒ *USUARIO:* %name
 
+ᴀꜱᴜɴᴀ ʙᴏᴛ x ᴡʜᴀᴛꜱᴀᴘᴘ
 %readmore
 `.trimStart(),
 
