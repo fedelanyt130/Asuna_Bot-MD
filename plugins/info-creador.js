@@ -8,12 +8,12 @@ import PhoneNumber from 'awesome-phonenumber';
 let handler = async (m, { conn }) => {
   m.react('🧃');
   
-const imageUrl = 'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/IMG-20250613-WA0194.jpg'
-  const numCreador = '50433191934';
+const imageUrl = 'https://files.catbox.moe/hmvsyj.jpg'
+  const numCreador = '5491156178758';
   const ownerJid = numCreador + '@s.whatsapp.net';
-  const name = await conn.getName(ownerJid) || 'Deylin';
-  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `Hola, mucho gusto. Soy Deylin.`;
-  const empresa = 'Deylin - Servicios Tecnológicos';
+  const name = await conn.getName(ownerJid) || 'Fede';
+  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `Hola, Soy fede.`;
+  const empresa = 'fede - Servicios Tecnológicos';
 
   const vcard = `
 BEGIN:VCARD
