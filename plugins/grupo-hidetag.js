@@ -15,7 +15,7 @@ var handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
   try { 
     let users = participants.map(u => conn.decodeJid(u.id)) 
 
-    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Pika Pika saludos!* ⚡")
+    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Holis!* 💖")
 
     let newText = `${tagText}\n\n> 💖 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ 💖`
 
@@ -42,7 +42,7 @@ var handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
     let isMedia = /image|video|sticker|audio/.test(mime)
     let more = String.fromCharCode(8206)
     let masss = more.repeat(850)
-    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Pika Pika saludos!* ⚡")
+    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Holis!* 💖")
 
     let htextos = `${tagText}\n\n> 💖 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ 💖`
 
