@@ -15,7 +15,7 @@ const handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, i
     isEnable = false;
 } else {
        const estado = isEnable ? '✓ Activado' : '✗ Desactivado';
-    return conn.reply(m.chat, `🌟 *PIKACHU-BOT CONTROL*\n━━━━━━━━━━━━━━━━━━━━\n📘 *Un administrador puede activar o desactivar la función* *${command}* *usando:*\n\n> ⚡ *${usedPrefix}${command} on* – Activar\n> ❌ *${usedPrefix}${command} off* – Desactivar\n\n━━━━━━━━━━━━━━━━━━━━\n🔎 *Estado actual:* ${estado}`, m, rcanal);
+    return conn.reply(m.chat, `💖 *ASUNA-BOT*\n━━━━━━━━━━━━━━━━━━━━\n📘 *Un administrador puede activar o desactivar la función* *${command}* *usando:*\n\n> ⚡ *${usedPrefix}${command} on* – Activar\n> ❌ *${usedPrefix}${command} off* – Desactivar\n\n━━━━━━━━━━━━━━━━━━━━\n🔎 *Estado actual:* ${estado}`, m, rcanal);
 }
 
   switch (type) {
@@ -332,7 +332,7 @@ const handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, i
 
   chat[type] = isEnable;
 
-    conn.reply(m.chat, `⚡ *PIKACHU-BOT STATUS*\n━━━━━━━━━━━━━━━━━━━━\n🐭 La función *${type}* ha sido\n${isEnable ? '⚡ *ACTIVADA*' : '💤 *DESACTIVADA*'} ${isAll ? 'para todo el bot ⚙️' : isUser ? 'para este entrenador 🎒' : 'en este grupo 🧩'}\n━━━━━━━━━━━━━━━━━━━━`, m, rcanal); 
+    conn.reply(m.chat, `💖 *ASUNA-BOT STATUS*\n━━━━━━━━━━━━━━━━━━━━\n🐭 La función *${type}* ha sido\n${isEnable ? '⚡ *ACTIVADA*' : '💤 *DESACTIVADA*'} ${isAll ? 'para todo el bot ⚙️' : isUser ? 'para este entrenador 🎒' : 'en este grupo 🧩'}\n━━━━━━━━━━━━━━━━━━━━`, m, rcanal); 
 };
 
 handler.help = ['welcome', 'bv', 'bienvenida', 'antiprivado', 'antipriv', 'antiprivate', 'restrict', 'restringir', 'autolevelup', 'autonivel', 'autosticker', 'antibot', 'antibots', 'autoaceptar', 'aceptarauto', 'autorechazar', 'rechazarauto', 'autoresponder', 'autorespond', 'antisubbots', 'antisub', 'antisubot', 'antibot2', 'modoadmin', 'soloadmin', 'autoread', 'autoleer', 'autover', 'antiver', 'antiocultar', 'antiviewonce', 'reaction', 'reaccion', 'emojis', 'nsfw', 'nsfwhot', 'nsfwhorny', 'antispam', 'antiSpam', 'antispamosos', 'antidelete', 'antieliminar', 'jadibotmd', 'modejadibot', 'subbots', 'detect', 'configuraciones', 'avisodegp', 'detect2', 'avisos', 'eventos', 'autosimi', 'simsimi', 'antilink', 'antilink2', 'antitoxic', 'antitoxicos', 'antitraba', 'antitrabas', 'antifake', 'antivirtuales']
