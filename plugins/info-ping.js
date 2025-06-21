@@ -1,30 +1,20 @@
 import speed from 'performance-now'
-import { exec } from 'child_process'
-import ws from 'ws'
+import { spawn, exec, execSync } from 'child_process'
 
 let handler = async (m, { conn }) => {
-  let timestamp = speed();
-  let latensi = speed() - timestamp;
-  const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
+let timestamp = speed()
+let sentMsg = await conn.reply(m.chat, '❀ Calculando ping...', m)
+let latency = speed() - timestamp
+exec(`neofetch --stdout`, (error, stdout, stderr) => {
+let child = stdout.toString("utf-8");
+let ssd = child.replace(/Memory:/, "Ram:")
 
-  exec(`neofetch --stdout`, (error, stdout, stderr) => {
-    let sysinfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
-
-    const pikachuPing = `
-╭━━━⊰  *ASUNA BOT*  ⊱━━━╮
-┃ 💖 *Estado:* ¡Activo y cargado! 
-┃ 🕒 *Velocidad:* ${latensi.toFixed(4)} ms
-┃ 🧃 *Subbots:* ${users.length}
-╰━━━━━━━━━━━━━━━━━━╯
-`.trim();
-
-    conn.reply(m.chat, pikachuPing, fkontak, rcanal);
-  });
+let result = `✰ *¡Pong!*\n> Tiempo ⴵ ${latency.toFixed(4).split(".")[0]}ms\n${ssd}`
+conn.sendMessage(m.chat, { text: result, edit: sentMsg.key }, { quoted: m })
+})
 }
-
 handler.help = ['ping']
 handler.tags = ['info']
 handler.command = ['ping', 'p']
-handler.register = true
 
 export default handler
