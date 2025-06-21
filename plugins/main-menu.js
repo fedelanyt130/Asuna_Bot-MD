@@ -18,12 +18,12 @@ let tags = {
 
 const defaultMenu = {
   before: `💖 *ＩＮＦＯ  ＢＯＴ* 💖
+❒ *NOMBRE BOT:* %botName
 ❒ *TIEMPO ACTIVO:* %muptime
 ❒ *MODE:* %mode
 ❒ *MODO:* » ${(conn.user.jid == global.conn.user.jid ? '`PRINCIPAL`' : '`SUB-BOT`')}
 
 ✩─『 INFO USUARIO 』─✩
-❒ *BOTNAME:* ${botName}
 ❒ *EXP:* %exp / %maxexp
 ❒ *USUARIOS:* %totalreg
 ❒ *USUARIO:* %name
