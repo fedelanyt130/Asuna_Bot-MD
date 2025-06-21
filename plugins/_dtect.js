@@ -11,7 +11,7 @@ let nombre, foto, edit, newlink, status, admingp, noadmingp
 
 nombre = `
 ⚡️ *¡Cambio de nombre!*
-🐭 Entrenador: *${usuario}*
+💖 Entrenador: *${usuario}*
 ✏️ Ha renombrado el grupo con su PokéPluma.
 
 📛 Nuevo nombre:
@@ -21,7 +21,7 @@ nombre = `
 
 foto = `
 🖼️ *¡Cambio de imagen!*
-🐭 *${usuario}* ha lanzado un *Ataque Estilo* sobre:
+💖 *${usuario}* ha lanzado un *Ataque Estilo* sobre:
 📍 *${groupMetadata.subject}*
 
 ✨ ¡La imagen del grupo ha evolucionado!
@@ -33,8 +33,8 @@ edit = `
 
 ⚙️ Configuración del grupo:
 ${m.messageStubParameters[0] == 'on' 
-  ? '🔒 Solo *Entrenadores Élite* (admins) pueden modificar la configuración.'
-  : '🔓 *Todos los miembros* pueden usar el PokéMenú de configuración.'
+  ? '🔒 Solo *solo los admins pueden modificar la configuración.'
+  : '🔓 *Todos los miembros* pueden usar el configuración.'
 }
 `
 
@@ -53,8 +53,8 @@ status = `
 🔁 Acción realizada por: *${usuario}*
 🎮 Estado actual:
 ${m.messageStubParameters[0] == 'on' 
-  ? '🔒 El grupo está *cerrado* — solo los Entrenadores Élite pueden hablar.'
-  : '🔓 El grupo está *abierto* — todos los entrenadores pueden participar.'
+  ? '🔒 El grupo está *cerrado* — solo los admins pueden hablar.'
+  : '🔓 El grupo está *abierto* — todos los admins  pueden participar.'
 }
 🎤 ¡Que comiencen las batallas de palabras!
 `
