@@ -23,7 +23,7 @@ let tags = {
   'logos': 'EDICION LOGOS', 
 }
 
-const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
+const vid = 'https://files.catbox.moe/2ovhhs.mp4';
 
 const defaultMenu = {
   before: `*✩───────────✩*
