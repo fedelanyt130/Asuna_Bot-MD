@@ -4,23 +4,23 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'crow': ' *`ASUNA MENUS`* ',
-  'main': 'INFO ',
-  'buscador': 'BUSQUEDAS ',
+  'crow': ' *`ASUNA MENUS`*',
+  'main': 'INFO',
+  'buscador': 'BUSQUEDAS',
   'fun': 'JUEGOS ',
-  'serbot': 'SUB BOTS ',
-  'rpg': 'RPG ',
-  'rg': 'REGISTRO ',
-  'sticker': 'STICKERS ',
-  'emox': 'ANIMES ',
-  'database': 'DATABASE ',
-  'grupo': 'GRUPOS ',
-  'nable': 'ON / OFF ', 
-  'descargas': ' DESCARGAS ',
-  'tools': ' HERRAMIENTAS ',
-  'info': 'INFORMACIÓN ',
-  'owner': 'CREADOR ',
-  'logos': 'EDICION LOGOS ', 
+  'serbot': 'SUB BOTS',
+  'rpg': 'RPG',
+  'rg': 'REGISTRO',
+  'sticker': 'STICKERS',
+  'emox': 'ANIMES',
+  'database': 'DATABASE',
+  'grupo': 'GRUPOS',
+  'nable': 'ON / OFF', 
+  'descargas': ' DESCARGAS',
+  'tools': ' HERRAMIENTAS',
+  'info': 'INFORMACIÓN',
+  'owner': 'CREADOR',
+  'logos': 'EDICION LOGOS', 
 }
 
 const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
@@ -30,7 +30,7 @@ const defaultMenu = {
 
 "❒ ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
 
-✩──『 *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* 』──✩
+✩──『 *INFO - BOT* 』──✩
 ❒ *Cliente:* %name
 ❒ *Modo:* Público
 ❒ *Baileys:* Multi Device
@@ -40,7 +40,7 @@ const defaultMenu = {
 %readmore
 \t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
 `.trimStart(),
-  header: '❒\n %category \n❒',
+  header: '\n %category \n',
   body: '*❒* %cmd',
   footer: '*ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*\n',
   after: `> ${dev}`,
