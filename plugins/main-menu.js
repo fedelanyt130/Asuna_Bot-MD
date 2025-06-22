@@ -296,33 +296,33 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 
     
 
-    let pp = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp = 'https://github.com/fedelanyt130.png'
 
-    let pp2 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp2 = 'https://github.com/fedelanyt130.png'
 
-    let pp3 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp3 = 'https://github.com/fedelanyt130.png'
 
-    let pp4 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp4 = 'https://github.com/fedelanyt130.png'
 
-    let pp5 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp5 = 'https://github.com/fedelanyt130.png'
 
-    let pp6 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp6 = 'https://github.com/fedelanyt130.png'
 
-    let pp7 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp7 = 'https://github.com/fedelanyt130.png'
 
-    let pp8 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp8 = 'https://github.com/fedelanyt130.png'
 
-    let pp9 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp9 = 'https://github.com/fedelanyt130.png'
 
-    let pp10 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp10 = 'https://github.com/fedelanyt130.png'
 
-    let pp11 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp11 = 'https://github.com/fedelanyt130.png'
 
-    let pp12 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp12 = 'https://github.com/fedelanyt130.png'
 
-    let pp13 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp13 = 'https://github.com/fedelanyt130.png'
 
-    let pp14 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
+    let pp14 = 'https://github.com/fedelanyt130.png'
 
     let pp15 = 'https://telegra.ph/file/5e7042bf17cde23989e71.jpg'
 
