@@ -20,19 +20,18 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
       let bienvenida = `┏━〔 *ʙɪᴇɴᴠᴇɴɪᴅᴏ/ᴀ* 〕━┓
-┃ Usuario: ${taguser}
-┃ Grupo: *${groupMetadata.subject}*
+┃ ❐ Usuario: ${taguser}
+┃ ❐ Grupo: *${groupMetadata.subject}*
 ┃
 ┃ ✨ ¡Pásala genial con todos!
-❐: ${groupdesc}
 ┗━━━━━━━━━━━━━━━━━━┛`
       await conn.sendMessage(m.chat, { image: img, caption: bienvenida, mentions: [who] })
     } else if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE || m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE) {
       let bye = `┏━〔 *ʜᴀꜱᴛᴀ ʟᴜᴇɢᴏ* 〕━┓
-┃ Usuario: ${taguser}
-┃ Grupo: *${groupMetadata.subject}*
+┃ ❐ Usuario: ${taguser}
+┃ ❐ Grupo: *${groupMetadata.subject}*
 ┃
-┃  ¡Te extrañaremos xd!
+┃ ¡Hastaluego no te extrañaremos xd!
 ┗━━━━━━━━━━━━━━━━━━┛`
       await conn.sendMessage(m.chat, { image: img, caption: bye, mentions: [who] })
     }
