@@ -5,40 +5,40 @@ import { xpRange } from '../lib/levelling.js'
 
 let tags = {
   'crow': ' *`ASUNA MENUS`* ',
-  'main': 'INFO',
-  'buscador': 'BUSQUEDAS',
-  'fun': 'JUEGOS',
-  'serbot': 'SUB BOTS',
-  'rpg': 'RPG',
-  'rg': 'REGISTRO',
-  'sticker': 'STICKERS',
-  'emox': 'ANIMES',
-  'database': 'DATABASE',
-  'grupo': 'GRUPOS',
-  'nable': 'ON / OFF', 
-  'descargas': 'DESCARGAS',
-  'tools': 'HERRAMIENTAS',
-  'info': 'INFORMACIÓN',
-  'owner': 'CREADOR',
-  'logos': 'EDICION LOGOS', 
+  'main': 'INFO ',
+  'buscador': 'BUSQUEDAS ',
+  'fun': 'JUEGOS ',
+  'serbot': 'SUB BOTS ',
+  'rpg': 'RPG ',
+  'rg': 'REGISTRO ',
+  'sticker': 'STICKERS ',
+  'emox': 'ANIMES ',
+  'database': 'DATABASE ',
+  'grupo': 'GRUPOS ',
+  'nable': 'ON / OFF ', 
+  'descargas': ' DESCARGAS ',
+  'tools': ' HERRAMIENTAS ',
+  'info': 'INFORMACIÓN ',
+  'owner': 'CREADOR ',
+  'logos': 'EDICION LOGOS ', 
 }
 
 const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
 
 const defaultMenu = {
-  before: `*✩────────────✩*
+  before: `*✩───────────✩*
 
-"「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+"❒ ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
 
 ✩──『 *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* 』──✩
-❒ 👤 *Cliente:* %name
-❒ 🔱 *Modo:* Público
-❒ ✨ *Baileys:* Multi Device
-❒ 🪐 *Tiempo Activo:* %muptime
-❒ 💫 *Usuarios:* %totalreg 
+❒ *Cliente:* %name
+❒ *Modo:* Público
+❒ *Baileys:* Multi Device
+❒ *Tiempo Activo:* %muptime
+❒ *Usuarios:* %totalreg 
 
 %readmore
-\t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
+\t*(✰◠‿◠) ASUNA BOT Al*   
 `.trimStart(),
   header: '✩──\n %category \n──✩',
   body: '*❒* %cmd',
