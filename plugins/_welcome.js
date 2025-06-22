@@ -24,7 +24,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 ┃ Grupo: *${groupMetadata.subject}*
 ┃
 ┃ ✨ ¡Pásala genial con todos!
-❐: ${groupDesc}
+❐: ${groupdesc}
 ┗━━━━━━━━━━━━━━━━━━┛`
       await conn.sendMessage(m.chat, { image: img, caption: bienvenida, mentions: [who] })
     } else if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE || m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE) {
