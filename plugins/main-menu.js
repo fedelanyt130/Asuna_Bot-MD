@@ -38,11 +38,11 @@ const defaultMenu = {
 ❒ *Usuarios:* %totalreg 
 
 %readmore
-\t*(✰◠‿◠) ASUNA BOT Al*   
+\t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
 `.trimStart(),
-  header: '✩\n %category \n✩',
+  header: ❒\n %category \n❒',
   body: '*❒* %cmd',
-  footer: '*❒*\n',
+  footer: '*ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
