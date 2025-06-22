@@ -102,7 +102,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       image: { url: 'https://github.com/fedelanyt130.png' },
       caption: text,
       footer: 'ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ',
-      
       viewOnce: true
     }, { quoted: m })
 
