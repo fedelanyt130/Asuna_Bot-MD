@@ -40,7 +40,7 @@ const defaultMenu = {
 %readmore
 \t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
 `.trimStart(),
-  header: ❒\n %category \n❒',
+  header: '❒\n %category \n❒',
   body: '*❒* %cmd',
   footer: '*ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*\n',
   after: `> ${dev}`,
