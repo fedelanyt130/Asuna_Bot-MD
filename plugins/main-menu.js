@@ -182,7 +182,7 @@ let img = 'https://github.com/fedelanyt130.png'; // valiendo vrg con los links
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
-handler.register = false
+handler.register = true
 
 export default handler
 
