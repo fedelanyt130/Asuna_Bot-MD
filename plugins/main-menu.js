@@ -26,20 +26,18 @@ let tags = {
 const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
 
 const defaultMenu = {
-  before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
+  before: `*✩────────────✩*
 
 "「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
 
-╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
-✦  👤 *Cliente:* %name
-✦  🔱 *Modo:* Público
-✧  ✨ *Baileys:* Multi Device
-✦  🪐 *Tiempo Activo:* %muptime
-✧  💫 *Usuarios:* %totalreg 
-╚━━━━━━━━━━━━━━
-%readmore
-*✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧*\n\n> Para Ser Un Sub Bots Usa #code para codigo de 8 dígitos y #qr para codigo qr.
+✩──『 *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* 』──✩
+❒ 👤 *Cliente:* %name
+❒ 🔱 *Modo:* Público
+❒ ✨ *Baileys:* Multi Device
+❒ 🪐 *Tiempo Activo:* %muptime
+❒ 💫 *Usuarios:* %totalreg 
 
+%readmore
 \t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
 `.trimStart(),
   header: '͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜\n┊➳ %category \n͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜',
