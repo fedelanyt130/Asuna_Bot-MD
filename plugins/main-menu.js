@@ -22,6 +22,8 @@ const defaultMenu = {
 ❒ *MODE:* %mode
 ❒ *MODO:* » ${(conn.user.jid == global.conn.user.jid ? '`PRINCIPAL`' : '`SUB-BOT`')}
 
+> *ᥴһᥲᥒᥒᥱᥣ ᥆𝖿ᥴ:* https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31
+
 ✩─『 INFO USUARIO 』─✩
 ❒ *USUARIOS:* %totalreg
 ❒ *USUARIO:* %name
