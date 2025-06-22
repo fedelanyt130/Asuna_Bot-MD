@@ -23,12 +23,12 @@ let tags = {
   'logos': '「EDICION LOGOS」🍨', 
 }
 
-const vid = 'https://files.catbox.moe/07lnqw.mp4';
+const vid = 'https://files.catbox.moe/2ovhhs.mp4';
 
 const defaultMenu = {
-  before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
+  before: `*✩───────────────✩*
 
-"「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+"❒ ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
 
 ╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
 ✦  👤 *Cliente:* %name
