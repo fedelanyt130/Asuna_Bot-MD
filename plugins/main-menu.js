@@ -149,6 +149,8 @@ await m.react(emojis)
 /* await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
 }, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null }) */
 
+let vid = 'https://files.catbox.moe/2ovhhs.mp4'; // valiendo vrg con los links
+
   await conn.sendMessage(m.chat, { 
       text: text.trim(),
       contextInfo: {
