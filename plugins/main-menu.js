@@ -12,8 +12,6 @@ const textCyberpunk = (text) => {
 
 let tags = {
   'main': textCyberpunk('sistema'),
-  'group': textCyberpunk('grupos'),
-  'serbot': textCyberpunk('sub bots'),
 }
 
 const defaultMenu = {
@@ -104,7 +102,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       image: { url: 'https://github.com/fedelanyt130.png' },
       caption: text,
       footer: 'ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ',
-      ],
+      
       viewOnce: true
     }, { quoted: m })
 
