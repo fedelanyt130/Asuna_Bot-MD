@@ -40,9 +40,9 @@ const defaultMenu = {
 %readmore
 \t*(✰◠‿◠) ASUNA BOT Al*   
 `.trimStart(),
-  header: '✩──\n %category \n──✩',
+  header: '✩\n %category \n✩',
   body: '*❒* %cmd',
-  footer: '*✩──✩*\n',
+  footer: '*❒*\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
