@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
 
         let results = await Promise.all(response.meta.map(async result => ({
             body: proto.Message.InteractiveMessage.Body.fromObject({ text: null }),
-            footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: 'Shadow Ultra - MD' }),
+            footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: 'Asuna Bot Al' }),
             header: proto.Message.InteractiveMessage.Header.fromObject({
                 title: result.title || "Sin título",
                 hasMediaAttachment: true,
