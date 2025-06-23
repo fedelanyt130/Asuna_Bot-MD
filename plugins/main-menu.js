@@ -158,7 +158,7 @@ let img = 'https://github.com/fedelanyt130.png'; // valiendo vrg con los links
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
               newsletterJid: channelRD.id,
-              newsletterName: ,
+              newsletterName: channelRD.name,
               serverMessageId: -1,
           },
           forwardingScore: 999,
