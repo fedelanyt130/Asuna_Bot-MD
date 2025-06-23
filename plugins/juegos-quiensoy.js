@@ -3,8 +3,8 @@
 
 const juegos = [
   {
-    pregunta: '🐭 Soy un Pokémon eléctrico amarillo muy famoso',
-    respuesta: 'pikachu'
+    pregunta: '💖 Soy un asuna tu botsita loca',
+    respuesta: 'asuna_Bot-Al'
   },
   {
     pregunta: '🕷️ Tengo poderes arácnidos y me llamo Peter Parker',
