@@ -18,7 +18,7 @@ var handler = async (m, { usedPrefix, command }) => {
                     await import(path.resolve(pluginsDir, file));
                 } catch (error) {
                     hasErrors = true;
-                    response += `${emojis} *Error en:* ${file} (${pluginsDir})\n`;
+                    response += `${emojis} *Error en:* ${files} (${pluginsDir})\n`;
                     if (error.loc) {
                         response += `*Línea:* ${error.loc.line}, *Columna:* ${error.loc.column}\n`;
                     }
@@ -32,7 +32,7 @@ var handler = async (m, { usedPrefix, command }) => {
         }
 
         await conn.reply(m.chat, response, m, fake);
-        await m.react('🔥');
+        await m.react('✔');
     } catch (err) {
         await m.react('✖️'); 
         console.error(err);
