@@ -8,9 +8,9 @@ const {
 
 // --- ¡IMPORTANTE! DEFINE ESTAS VARIABLES ---
 // Reemplaza estos valores con los tuyos. Son necesarios para que el bot funcione correctamente.
-const rcanal = 'https://whatsapp.com/channel/xxxxxxxxxxxxxx'; // URL de tu canal de WhatsApp
-const dev = 'Deymoon Club oficial'; // Tu nombre o el nombre de tu bot
-const avatar = 'https://telegra.ph/file/xxxxxxxx.jpg'; // URL de una imagen para usar como miniatura
+const rcanal = 'https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31'; // URL de tu canal de WhatsApp
+const dev = 'fedelanYT'; // Tu nombre o el nombre de tu bot
+const avatar = 'https://files.catbox.moe/eyxsoy.jpg'; // URL de una imagen para usar como miniatura
 const redes = 'https://github.com/tu_usuario'; // URL a tus redes o a un repositorio
 
 let handler = async (message, { conn, text, usedPrefix, command }) => {
@@ -27,7 +27,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           mediaUrl: null, 
           mediaType: 1, 
           showAdAttribution: true,
-          title: 'Deymoon Club',
+          title: 'Asuna_Bot-Al',
           body: dev, // Se usa 'dev' que definimos arriba
           previewType: 0, 
           thumbnail: await (await conn.getFile(avatar)).data, // Descargamos la miniatura para evitar problemas
