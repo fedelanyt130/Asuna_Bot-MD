@@ -41,7 +41,7 @@ const defaultMenu = {
 \t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
 `.trimStart(),
   header: '\n `%category` \n',
-  body: '*◌❐💖༉* %cmd',
+  body: '*◌୧💖༉* %cmd',
   footer: '\n',
   after: `> ${dev}`,
 }
