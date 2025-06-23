@@ -166,7 +166,7 @@ let img = 'https://github.com/fedelanyt130.png'; // valiendo vrg con los links
               title: textbot,
               body: dev,
               thumbnailUrl: img,
-              sourceUrl: false,
+              sourceUrl: true,
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
