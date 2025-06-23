@@ -4,47 +4,45 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'crow': '👑「 *`MENUS CROWBOT`* 」👑',
-  'main': '「INFO」🍨',
-  'buscador': '「BUSQUEDAS」🍨',
-  'fun': '「JUEGOS」🍨',
-  'serbot': '「SUB BOTS」🍨',
-  'rpg': '「RPG」🍨',
-  'rg': '「REGISTRO」🍨',
-  'sticker': '「STICKERS」🍨',
-  'emox': '「ANIMES」🍨',
-  'database': '「DATABASE」🍨',
-  'grupo': '「GRUPOS」🍨',
-  'nable': '「ON / OFF」', 
-  'descargas': '「DESCARGAS」🍨',
-  'tools': '「HERRAMIENTAS」🍨',
-  'info': '「INFORMACIÓN」🍨',
-  'owner': '「CREADOR」🍨',
-  'logos': '「EDICION LOGOS」🍨', 
+  'crow': ' *`ASUNA MENUS`*',
+  'main': 'INFO',
+  'buscador': 'BUSQUEDAS',
+  'fun': 'JUEGOS',
+  'serbot': 'SUB BOTS',
+  'rpg': 'RPG',
+  'rg': 'REGISTRO',
+  'sticker': 'STICKERS',
+  'emox': 'ANIMES',
+  'database': 'DATABASE',
+  'grupo': 'GRUPOS',
+  'nable': 'ON / OFF', 
+  'descargas': 'DESCARGAS',
+  'tools': 'HERRAMIENTAS',
+  'info': 'INFORMACIÓN',
+  'owner': 'CREADOR',
+  'logos': 'EDICION LOGOS', 
 }
 
-const vid = 'https://files.catbox.moe/dqp8z4.mp4';
+const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
 
 const defaultMenu = {
-  before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
+  before: `*❐══════════════❐*
 
-"「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+"୧💖༉ ¡Hola! *%name* %greeting, (𓆩◠‿◠)
 
-╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
-✦  👤 *Cliente:* %name
-✦  🔱 *Modo:* Público
-✧  ✨ *Baileys:* Multi Device
-✦  🪐 *Tiempo Activo:* %muptime
-✧  💫 *Usuarios:* %totalreg 
-╚━━━━━━━━━━━━━━
+✩══『 *INFO - BOT* 』══✩
+୧❒༉ *Cliente:* %name
+୧❒༉ *Modo:* Público
+୧❒༉ *Baileys:* Multi Device
+୧❒༉ *Tiempo Activo:* %muptime
+୧❒༉ *Usuarios:* %totalreg 
+
 %readmore
-*✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧*\n\n> Para Ser Un Sub Bots Usa #code para codigo de 8 dígitos y #qr para codigo qr.
-
-\t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
+\t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
 `.trimStart(),
-  header: '͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜\n┊➳ %category \n͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜',
-  body: '*┃⏤͟͟͞͞🍭➤›* %cmd',
-  footer: '*┗━*\n',
+  header: '\n `%category` \n',
+  body: '*◌୧💖༉* %cmd',
+  footer: '\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -148,8 +146,33 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react(emojis) 
 
-await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
-}, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
+/* await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
+}, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null }) */
+
+let img = 'https://github.com/fedelanyt130.png'; // valiendo vrg con los links
+
+  await conn.sendMessage(m.chat, { 
+      text: text.trim(),
+      contextInfo: {
+          mentionedJid: [m.sender],
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+              newsletterJid: channelRD.id,
+              newsletterName: channelRD.name,
+              serverMessageId: -1,
+          },
+          forwardingScore: 999,
+          externalAdReply: {
+              title: textbot,
+              body: dev,
+              thumbnailUrl: img,
+              sourceUrl: false,
+              mediaType: 1,
+              showAdAttribution: true,
+              renderLargerThumbnail: true,
+          },
+      },
+  }, { quoted: m })
 
   } catch (e) {
     conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${e.message}`, m, rcanal, )
@@ -159,7 +182,7 @@ await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), cont
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
-handler.register = false
+handler.register = true
 
 export default handler
 
