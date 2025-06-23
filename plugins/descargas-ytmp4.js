@@ -61,7 +61,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 }
 
 handler.help = ['play *<texto>*']
-handler.tags = ['descargas']
+handler.tags = ['downloader']
 handler.command = /^(keni)$/i
 handler.disable = false
 
