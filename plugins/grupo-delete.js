@@ -13,7 +13,7 @@ handler.help = ['delete']
 handler.tags = ['grupo']
 handler.command = ['del','delete']
 handler.group = false
-handler.admin = true
+handler.admin = false
 handler.botAdmin = true
 
 export default handler
