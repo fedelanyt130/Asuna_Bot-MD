@@ -43,7 +43,7 @@ await conn.sendMessage(m.chat, {
 })
 
 }
-handler.help = ['creador']
+handler.help = ['creador1']
 handler.command = ['cuentas', 'creator', 'owner', 'propietario', 'dueño']
 handler.register = true
 handler.tags = ['main']
