@@ -28,14 +28,14 @@ const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJp
 const defaultMenu = {
   before: `*✩───────────✩*
 
-"❒ ¡Hola! *%name* %greeting, 
+"୧💖༉ ¡Hola! *%name* %greeting, 
 
 ✩──『 *INFO - BOT* 』──✩
-❒ *Cliente:* %name
-❒ *Modo:* Público
-❒ *Baileys:* Multi Device
-❒ *Tiempo Activo:* %muptime
-❒ *Usuarios:* %totalreg 
+୧❒༉ *Cliente:* %name
+୧❒༉ *Modo:* Público
+୧❒༉ *Baileys:* Multi Device
+୧❒༉ *Tiempo Activo:* %muptime
+୧❒༉ *Usuarios:* %totalreg 
 
 %readmore
 \t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
