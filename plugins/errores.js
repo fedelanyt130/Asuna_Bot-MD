@@ -31,12 +31,12 @@ var handler = async (m, { usedPrefix, command }) => {
             response += `${emojis} ¡Todo está en orden! No se detectaron errores de sintaxis.`;
         }
 
-        await conn.reply(m.chat, response, m, rcanal);
+        await conn.reply(m.chat, response, m, fake);
         await m.react('🔥');
     } catch (err) {
         await m.react('✖️'); 
         console.error(err);
-        conn.reply(m.chat, '🚩 *Ocurrió un fallo al verificar los plugins.*', m, rcanal);
+        conn.reply(m.chat, '🚩 *Ocurrió un fallo al verificar los plugins.*', m, fake);
     }
 };
 
