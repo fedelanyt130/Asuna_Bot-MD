@@ -1,227 +1,136 @@
-import { promises } from 'fs'
-import { join } from 'path'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
+import sharp from "sharp";
+import { promises as fs } from 'fs';
 
-let tags = {
-  'crow': ' *`ASUNA MENUS`*',
-  'main': 'INFO',
-  'buscador': 'BUSQUEDAS',
-  'fun': 'JUEGOS ',
-  'serbot': 'SUB BOTS',
-  'rpg': 'RPG',
-  'rg': 'REGISTRO',
-  'sticker': 'STICKERS',
-  'emox': 'ANIMES',
-  'database': 'DATABASE',
-  'grupo': 'GRUPOS',
-  'nable': 'ON / OFF', 
-  'descargas': ' DESCARGAS',
-  'tools': ' HERRAMIENTAS',
-  'info': 'INFORMACIÓN',
-  'owner': 'CREADOR',
-  'logos': 'EDICION LOGOS', 
-}
-
-const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
-
-const defaultMenu = {
-  before: `*✩───────────✩*
-
-"❒ ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
-
-✩──『 *INFO - BOT* 』──✩
-❒ *Cliente:* %name
-❒ *Modo:* Público
-❒ *Baileys:* Multi Device
-❒ *Tiempo Activo:* %muptime
-❒ *Usuarios:* %totalreg 
-
-%readmore
-\t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
-`.trimStart(),
-  header: '✩──\n %category \n──✩',
-  body: '*❒* %cmd',
-  footer: '*ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*\n',
-  after: `> ${dev}`,
-}
-let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
-  try {
-    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { exp, estrellas, level, role } = global.db.data.users[m.sender]
-    let { min, xp, max } = xpRange(level, global.multiplier)
-    let name = await conn.getName(m.sender)
-    exp = exp || 'Desconocida';
-    role = role || 'Aldeano';
-    let d = new Date(new Date + 3600000)
-    let locale = 'es'
-    let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let week = d.toLocaleDateString(locale, { weekday: 'long' })
-    let date = d.toLocaleDateString(locale, {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-    let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    }).format(d)
-let botinfo = (conn.user.jid == global.conn.user.jid ? 'Oficial' : 'Sub-Bot');
-
-    let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    })
-    let _uptime = process.uptime() * 1000
-    let _muptime
-    if (process.send) {
-      process.send('uptime')
-      _muptime = await new Promise(resolve => {
-        process.once('message', resolve)
-        setTimeout(resolve, 1000)
-      }) * 1000
+let handler = async (m, { conn, usedPrefix }) => {
+    m.react("🍂");
+    let name = await conn.getName(m.sender);
+    if (!global.menutext) {
+      await global.menu();
     }
-    let muptime = clockString(_muptime)
-    let uptime = clockString(_uptime)
-    let totalreg = Object.keys(global.db.data.users).length
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
-    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
-      return {
-        help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
-        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
-        prefix: 'customPrefix' in plugin,
-        estrellas: plugin.estrellas,
-        premium: plugin.premium,
-        enabled: !plugin.disabled,
-      }
-    })
-    for (let plugin of help)
-      if (plugin && 'tags' in plugin)
-        for (let tag of plugin.tags)
-          if (!(tag in tags) && tag) tags[tag] = tag
-    conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || defaultMenu.before
-    let header = conn.menu.header || defaultMenu.header
-    let body = conn.menu.body || defaultMenu.body
-    let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
-    let _text = [
-      before,
-      ...Object.keys(tags).map(tag => {
-        return header.replace(/%category/g, tags[tag]) + '\n' + [
-          ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
-            return menu.help.map(help => {
-              return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
-                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
-                .trim()
-            }).join('\n')
-          }),
-          footer
-        ].join('\n')
-      }),
-      after
-    ].join('\n')
-    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
-let replace = {
-'%': '%',
-p: _p, uptime, muptime,
-me: conn.getName(conn.user.jid),
-taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
-npmname: _package.name,
-npmdesc: _package.description,
-version: _package.version,
-exp: exp - min,
-maxexp: xp,
-botofc: (conn.user.jid == global.conn.user.jid ? '💛 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `💛 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
-totalexp: exp,
-xp4levelup: max - exp,
-github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-greeting, level, estrellas, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
-readmore: readMore
-}
-text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-
-await m.react(emojis) 
-
-/* await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
-}, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null }) */
-
-let img = 'https://github.com/fedelanyt130.png'; // valiendo vrg con los links
-
-  await conn.sendMessage(m.chat, { 
-      text: text.trim(),
-      contextInfo: {
-          mentionedJid: [m.sender],
+    let cap = global.menutext;
+    let txt = `🍄 ${ucapan()}, @${m.sender.split("@")[0]} !\n\n${cap}`;
+    let mention = conn.parseMention(txt)
+try {
+let imager = await sharp('./src/doc_image.jpg')
+  .resize(400, 400)
+  .toBuffer();
+let img = await fs.readFile("./src/menu.jpg");
+ await conn.sendMessage(
+      m.chat,
+      {
+        document: img,
+        fileName: "ѕуℓρнιєттє'ѕ",
+        mimetype: "image/png",
+        caption: txt,
+        fileLength: 1900,
+        jpegThumbnail: imager,
+        contextInfo: {
+          mentionedJid: mention,
           isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-              newsletterJid: false,
-              newsletterName: false,
-              serverMessageId: -1,
-          },
           forwardingScore: 999,
           externalAdReply: {
-              title: textbot,
-              body: dev,
-              thumbnailUrl: img,
-              sourceUrl: false,
-              mediaType: 1,
-              showAdAttribution: true,
-              renderLargerThumbnail: true,
+            title: "",
+            body: `あ ${wm}`,
+            thumbnail: img,
+            sourceUrl: "",
+            mediaType: 1,
+            renderLargerThumbnail: true,
           },
+        },
       },
-  }, { quoted: m })
-
+      { quoted: m }
+    );
   } catch (e) {
-    conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${e.message}`, m, rcanal, )
-    throw e
+  conn.reply(m.chat, txt, m, { mentions: mention })
+    conn.reply(m.chat, "❎ Error al mostrar el menú principal : " + e, m);
   }
+await global.menu();
+};
+handler.command = ["menu", "help", "menú", "commands", "comandos", "?"];
+export default handler;
+
+function ucapan() {
+  const time = moment.tz("America/Los_Angeles").format("HH");
+  if (time >= 18) return "Good night.";
+  if (time >= 15) return "Good afternoon.";
+  if (time >= 10) return "Good afternoon.";
+  if (time >= 4) return "Good morning.";
+  return "Hello.";
 }
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
-handler.register = true
+var xStr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+var yStr = Object.freeze({
+1: ['ᴀ', 'ʙ', 'ᴄ', 'ᴅ', 'ᴇ', 'ꜰ', 'ɢ', 'ʜ', 'ɪ', 'ᴊ', 'ᴋ', 'ʟ', 'ᴍ', 'ɴ', 'ᴏ', 'ᴘ', 'q', 'ʀ', 'ꜱ', 'ᴛ', 'ᴜ', 'ᴠ', 'ᴡ', 'x', 'ʏ', 'ᴢ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+2: ['𝑎', '𝑏', '𝑐', '𝑑', '𝑒', '𝑓', '𝑔', 'ℎ', '𝑖', '𝑗', '𝑘', '𝑙', '𝑚', '𝑛', '𝑜', '𝑝', '𝑞', '𝑟', '𝑠', '𝑡', '𝑢', '𝑣', '𝑤', '𝑥', '𝑦', '𝑧', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+3: ['𝐚', '𝐛', '𝐜', '𝐝', '𝐞', '𝐟', '𝐠', '𝐡', '𝐢', '𝐣', '𝐤', '𝐥', '𝐦', '𝐧', '𝐨', '𝐩', '𝐪', '𝐫', '𝐬', '𝐭', '𝐮', '𝐯', '𝐰', '𝐱', '𝐲', '𝐳', '𝟏', '𝟐', '𝟑', '𝟒', '𝟓', '𝟔', '𝟕', '𝟖', '𝟗', '𝟎'],
+4: ['𝒂', '𝒃', '𝒄', '𝒅', '𝒆', '𝒇', '𝒈', '𝒉', '𝒊', '𝒋', '𝒌', '𝒍', '𝒎', '𝒏', '𝒐', '𝒑', '𝒒', '𝒓', '𝒔', '𝒕', '𝒖', '𝒗', '𝒘', '𝒙', '𝒚', '𝒛', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+5: ['𝗮', '𝗯', '𝗰', '𝗱', '𝗲', '𝗳', '𝗴', '𝗵', '𝗶', '𝗷', '𝗸', '𝗹', '𝗺', '𝗻', '𝗼', '𝗽', '𝗾', '𝗿', '𝘀', '𝘁', '𝘂', '𝘃', '𝘄', '𝘅', '𝘆', '𝘇', '𝟭', '𝟮', '𝟯', '𝟰', '𝟱', '𝟲', '𝟳', '𝟴', '𝟵', '𝟬'],
+6: ['ᵃ', 'ᵇ', 'ᶜ', 'ᵈ', 'ᵉ', 'ᶠ', 'ᵍ', 'ʰ', 'ⁱ', 'ʲ', 'ᵏ', 'ˡ', 'ᵐ', 'ⁿ', 'ᵒ', 'ᵖ', 'ᵠ', 'ʳ', 'ˢ', 'ᵗ', 'ᵘ', 'ᵛ', 'ʷ', 'ˣ', 'ʸ', 'ᶻ', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹', '⁰'],
+7: ['ᗩ', 'ᗷ', 'ᑕ', 'ᗪ', 'ᗴ', 'ᖴ', 'ᘜ', 'ᕼ', 'I', 'ᒍ', 'K', 'ᒪ', 'ᗰ', 'ᑎ', 'O', 'ᑭ', 'ᑫ', 'ᖇ', 'Տ', 'T', 'ᑌ', 'ᐯ', 'ᗯ', '᙭', 'Y', 'ᘔ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+8: ['𝙖', '𝙗', '𝙘', '𝙙', '𝙚', '𝙛', '𝙜', '𝙝', '𝙞', '𝙟', '𝙠', '𝙡', '𝙢', '𝙣', '𝙤', '𝙥', '𝙦', '𝙧', '𝙨', '𝙩', '𝙪', '𝙫', '𝙬', '𝙭', '𝙮', '𝙯', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+9: ['𝘢', '𝘣', '𝘤', '𝘥', '𝘦', '𝘧', '𝘨', '𝘩', '𝘪', '𝘫', '𝘬', '𝘭', '𝘮', '𝘯', '𝘰', '𝘱', '𝘲', '𝘳', '𝘴', '𝘵', '𝘶', '𝘷', '𝘸', '𝘹', '𝘺', '𝘻', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+10: ['𝖺', '𝖻', '𝖼', '𝖽', '𝖾', '𝖿', '𝗀', '𝗁', '𝗂', '𝗃', '𝗄', '𝗅', '𝗆', '𝗇', '𝗈', '𝗉', '𝗊', '𝗋', '𝗌', '𝗍', '𝗎', '𝗏', '𝗐', '𝗑', '𝗒', '𝗓', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+11: ['Ⓐ︎', 'Ⓑ', '︎Ⓒ', '︎Ⓓ︎', 'Ⓔ︎', 'Ⓕ︎', 'Ⓖ︎', 'Ⓗ︎', 'Ⓘ︎', 'Ⓙ︎', 'Ⓚ︎', 'Ⓛ︎', 'Ⓜ︎', 'Ⓝ︎', 'Ⓞ︎', 'Ⓟ', '︎Ⓠ︎', 'Ⓡ︎', 'Ⓢ', '︎Ⓣ︎', 'Ⓤ︎', 'Ⓥ︎', 'Ⓦ︎', 'Ⓧ︎', 'Ⓨ︎', 'Ⓩ︎', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+12: ['🅐︎', '🅑︎', '🅒', '︎🅓︎', '🅔︎', '🅕︎', '🅖︎', '🅗', '︎🅘︎', '🅙︎', '🅚', '︎🅛︎', '🅜', '︎🅝︎', '🅞', '︎🅟', '︎🅠︎', '🅡︎', '🅢', '︎🅣', '︎🅤', '︎🅥︎', '🅦︎', '🅧︎', '🅨︎', '🅩︎', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+13: ['𝓪', '𝓫', '𝓬', '𝓭', '𝓮', '𝓯', '𝓰', '𝓱', '𝓲', '𝓳', '𝓴', '𝓵', '𝓶', '𝓷', '𝓸', '𝓹', '𝓺', '𝓻', '𝓼', '𝓽', '𝓾', '𝓿', '𝔀', '𝔁', '𝔂', '𝔃', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+14: ['ⓐ', 'ⓑ', 'ⓒ', 'ⓓ', 'ⓔ', 'ⓕ', 'ⓖ', 'ⓗ', 'ⓘ', 'ⓙ', 'ⓚ', 'ⓛ', 'ⓜ', 'ⓝ', 'ⓞ', 'ⓟ', 'ⓠ', 'ⓡ', 'ⓢ', 'ⓣ', 'ⓤ', 'ⓥ', 'ⓦ', 'ⓧ', 'ⓨ', 'ⓩ', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⓪'],
+15: ['𝚊', '𝚋', '𝚌', '𝚍', '𝚎', '𝚏', '𝚐', '𝚑', '𝚒', '𝚓', '𝚔', '𝚕', '𝚖', '𝚗', '𝚘', '𝚙', '𝚚', '𝚛', '𝚜', '𝚝', '𝚞', '𝚟', '𝚠', '𝚡', '𝚢', '𝚣', '𝟷', '𝟸', '𝟹', '𝟺', '𝟻', '𝟼', '𝟽', '𝟾', '𝟿', '𝟶'],
+16: ['🄰', '🄱', '🄲', '🄳', '🄴', '🄵', '🄶', '🄷', '🄸', '🄹', '🄺', '🄻', '🄼', '🄽', '🄾', '🄿', '🅀', '🅁', '🅂', '🅃', '🅄', '🅅', '🅆', '🅇', '🅈', '🅉', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⓪'],
+17: ['𝕒', '𝕓', '𝕔', '𝕕', '𝕖', '𝕗', '𝕘', '𝕙', '𝕚', '𝕛', '𝕜', '𝕝', '𝕞', '𝕟', '𝕠', '𝕡', '𝕢', '𝕣', '𝕤', '𝕥', '𝕦', '𝕧', '𝕨', '𝕩', '𝕪', '𝕫', '𝟙', '𝟚', '𝟛', '𝟜', '𝟝', '𝟞', '𝟟', '𝟠', '𝟡', '𝟘'],
+18: ['【a】', '【b】', '【c】', '【d】', '【e】', '【f】', '【g】', '【h】', '【i】', '【j】', '【k】', '【l】', '【m】', '【n】', '【o】', '【p】', '【q】', '【r】', '【s】', '【t】', '【u】', '【v】', '【w】', '【x】', '【y】', '【z】', '【1】', '【2】', '【3】', '【4】', '【5】', '【6】', '【7】', '【8】', '【9】', '【0】'],
+19: ['ａ', 'ｂ', 'ｃ', 'ｄ', 'ｅ', 'ｆ', 'ｇ', 'ｈ', 'ｉ', 'ｊ', 'ｋ', 'ｌ', 'ｍ', 'ｎ', 'ｏ', 'ｐ', 'ｑ', 'ｒ', 'ｓ', 'ｔ', 'ｕ', 'ｖ', 'ｗ', 'ｘ', 'ｙ', 'ｚ', '１', '２', '３', '４', '５', '６', '７', '８', '９', '０'],
+20: ['𝖆', '𝖇', '𝖈', '𝖉', '𝖊', '𝖋', '𝖌', '𝖍', '𝖎', '𝖏', '𝖐', '𝖑', '𝖒', '𝖓', '𝖔', '𝖕', '𝖖', '𝖗', '𝖘', '𝖙', '𝖚', '𝖛', '𝖜', '𝖝', '𝖞', '𝖟', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+})
 
-export default handler
+global.style = async function styles(text, style = 1) {
+  var replacer = [];
+  xStr.map((v, i) =>
+    replacer.push({
+      original: v,
+      convert: yStr[style][i],
+    })
+  );
+  var str = text.toLowerCase().split("");
+  var output = [];
+  str.map((v) => {
+    const find = replacer.find((x) => x.original == v);
+    find ? output.push(find.convert) : output.push(v);
+  });
+  return output.join("");
+};
 
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
+global.menu = async function getMenu() {
+  let text = "";
+  let help = Object.values(global.plugins)
+    .filter((plugin) => !plugin.disabled)
+    .map((plugin) => {
+      return {
+        help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
+        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+      };
+    });
 
-function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-}
+  let tags = {};
+  for (let plugin of help) {
+    if (plugin && plugin.tags) {
+      for (let tag of plugin.tags) {
+        if (tag) tags[tag] = tag.toUpperCase();
+      }
+    }
+  }
+  for (let category of Object.keys(tags)) {
+    let cmds = await Promise.all(help
+      .filter(
+        (menu) => menu.tags && menu.tags.includes(category) && menu.help
+      )
+      .map(async (menu) => {
+        return await Promise.all(menu.help
+          .map(async (cmd) => `𖦹 𓈒 \`${await style(cmd, 10)}\``));
+      }));
 
-  var ase = new Date();
-  var hour = ase.getHours();
-switch(hour){
-  case 0: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
-  case 1: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 💤'; break;
-  case 2: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🦉'; break;
-  case 3: hour = 'Bᴜᴇɴᴏs Dɪᴀs ✨'; break;
-  case 4: hour = 'Bᴜᴇɴᴏs Dɪᴀs 💫'; break;
-  case 5: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌅'; break;
-  case 6: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌄'; break;
-  case 7: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌅'; break;
-  case 8: hour = 'Bᴜᴇɴᴏs Dɪᴀs 💫'; break;
-  case 9: hour = 'Bᴜᴇɴᴏs Dɪᴀs ✨'; break;
-  case 10: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌞'; break;
-  case 11: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌨'; break;
-  case 12: hour = 'Bᴜᴇɴᴏs Dɪᴀs ❄'; break;
-  case 13: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌤'; break;
-  case 14: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌇'; break;
-  case 15: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🥀'; break;
-  case 16: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌹'; break;
-  case 17: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌆'; break;
-  case 18: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
-  case 19: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
-  case 20: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌌'; break;
-  case 21: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
-  case 22: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
-  case 23: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
-}
-  var greeting = hour;
+    if (cmds.length > 0) {
+      text += `乂 \`${await style(tags[category], 7)}\`\n\n${cmds.map(cmdArray => cmdArray.join('\n')).join('\n')}\n\n`;
+    }
+  }
+  text += `\`${footer}\``;
+  global.menutext = text;
+};
