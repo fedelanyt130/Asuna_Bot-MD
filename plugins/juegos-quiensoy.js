@@ -1,9 +1,9 @@
-// creador por brayan X clarita 
-// https://github.com/El-brayan502 
+// creador por FedelanYT
+// https://github.com/fedelanyt130
 
 const juegos = [
   {
-    pregunta: '💖 Soy un asuna tu botsita loca',
+    pregunta: '💖 Soy una chica con poderes mágicos ',
     respuesta: 'asuna_Bot-Al'
   },
   {
