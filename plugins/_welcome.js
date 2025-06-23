@@ -31,7 +31,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 ┃ ❐ Usuario: ${taguser}
 ┃ ❐ Grupo: *${groupMetadata.subject}*
 ┃
-┃ ¡Hastaluego no te extrañaremos xd!
+┃ ¡Hasta luego no te extrañaremos!
 ┗━━━━━━━━━━━━━━━━━━┛`
       await conn.sendMessage(m.chat, { image: img, caption: bye, mentions: [who] })
     }
