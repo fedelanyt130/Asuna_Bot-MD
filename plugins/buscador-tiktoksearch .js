@@ -32,7 +32,7 @@ const handler = async (m, { conn, text}) => {
 }
 };
 
-handler.command = ["tiktoksearch"];
+handler.command = ["tiktoksearch', 'tiktoks"];
 export default handler;
 
 const tiktok = {
