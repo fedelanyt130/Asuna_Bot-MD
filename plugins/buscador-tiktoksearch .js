@@ -11,7 +11,7 @@ const {
 const rcanal = 'https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31'; // URL de tu canal de WhatsApp
 const dev = 'fedelanYT'; // Tu nombre o el nombre de tu bot
 const avatar = 'https://files.catbox.moe/eyxsoy.jpg'; // URL de una imagen para usar como miniatura
-const redes = 'https://github.com/tu_usuario'; // URL a tus redes o a un repositorio
+const redes = 'https://github.com/fedelanyt130'; // URL a tus redes o a un repositorio
 
 let handler = async (message, { conn, text, usedPrefix, command }) => {
   if (!text) {
