@@ -1,17 +1,25 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let creadorID = '5491156178758@s.whatsapp.net'
+let creadorID = '5351524614@s.whatsapp.net'
 let isInGroup = m.isGroup && (await conn.groupMetadata(m.chat)).participants.some(p => p.id === creadorID)
 
-let numeroTexto = isInGroup ? `@${creadorID.split('@')[0]}` : `+5491156178758`
+let numeroTexto = isInGroup ? `@${creadorID.split('@')[0]}` : `+53 51524614`
 
-let creador = `👑 *ENCLACES OFC*
+let creador = `🌹 *C R E A D O R - 💎 - B O T*
 
-❐ *GRUPO OFC:*
-https://chat.whatsapp.com/K0534XyhiHp3vm49GxKcC0
-❐ *CANAL OFC*
-https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31
-❐ *CANAL DE REGISTROS:*
+🌱 *NOMBRE:* ᥫᩣᎠ꯭I𝚫⃥꯭M꯭Ꭷ꯭Ꮑ꯭Ꭰ࠭⋆̟(◣_◢)凸
+🍟 *NUMERO:* ${numeroTexto}
+🪴 *LINK:* wa.me/5351524614
+
+👑 *E N L A C E S - U T I L E S:*
+
+• *GRUPO OFC:*
+https://chat.whatsapp.com/F4QEFF2Hn4102NdbPJ2ZOi
+• *CANAL OFC*
+https://whatsapp.com/channel/0029VaqAtuIK0IBsHYXtvA3e
+• *GITHUB:*
 https://github.com/David-Chian
+• *YOUTUBE:*
+https://youtube.com/@davidchian4957
 `
 
 await conn.sendMessage(m.chat, {
@@ -35,8 +43,8 @@ await conn.sendMessage(m.chat, {
 })
 
 }
-handler.help = ['cuentas']
-handler.command = ['cuentas']
+handler.help = ['creador']
+handler.command = ['cuentas', 'creator', 'owner', 'propietario', 'dueño']
 handler.register = true
 handler.tags = ['main']
 
