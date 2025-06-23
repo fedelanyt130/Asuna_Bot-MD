@@ -28,7 +28,7 @@ const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJp
 const defaultMenu = {
   before: `*✩───────────✩*
 
-"❒ ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+"❒ ¡Hola! *%name* %greeting, Soy, ${botname}
 
 ✩──『 *INFO - BOT* 』──✩
 ❒ *Cliente:* %name
