@@ -3,7 +3,7 @@
 
 const juegos = [
   {
-    pregunta: '💖 Soy una chica con poderes mágicos ',
+    pregunta: '💖 Soy una chica con poderes mágicos',
     respuesta: 'asuna_Bot-Al'
   },
   {
