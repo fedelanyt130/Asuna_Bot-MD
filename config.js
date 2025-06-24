@@ -25,9 +25,7 @@ import moment from 'moment-timezone'
 
 // ⚙️ PROPIETARIO Y STAFF
 global.owner = [
-['5491156178758', '🔰 Creador 🔰', true],
-['5217227584934', 'Angel', true],
-['573001533523', 'BʀᴀʏᴀɴXD', true],
+['5491156178758', '⚘ Creador 🍀', true],
 //['numero', 'nombre', true],
 ];
 
