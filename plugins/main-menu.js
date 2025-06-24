@@ -167,7 +167,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
               body: dev,
               thumbnailUrl: img,
               sourceUrl: false,
-              mediaType: 1,
+              mediaType: 5,
               showAdAttribution: true,
               renderLargerThumbnail: true,
           },
