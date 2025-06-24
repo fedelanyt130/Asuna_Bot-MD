@@ -32,7 +32,6 @@ npm start
   <a href="https://wa.me/5491156178758">
     <img title="Autor" src="https://img.shields.io/badge/FedelanYT-black?style=for-the-badge&logo=whatsapp">
   </a>
-
 ## 
 <a href="https://github.com/fedelanyt130">
   <img src="https://github.com/fedelanyt130.png" width="250" height="250" alt="fedelanyt130"/>
