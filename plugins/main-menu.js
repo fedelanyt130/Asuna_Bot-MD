@@ -164,12 +164,12 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
           forwardingScore: 999,
           externalAdReply: {
               title: textbot,
-              body: false,
+              body: ,
               thumbnailUrl: img,
               sourceUrl: false,
               mediaType: 1,
-              showAdAttribution: true,
-              renderLargerThumbnail: false,
+              showAdAttribution: false,
+              renderLargerThumbnail: true,
           },
       },
   }, { quoted: m })
