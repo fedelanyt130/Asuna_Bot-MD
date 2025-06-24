@@ -180,7 +180,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
   }
 }
 handler.help = ['menu']
-handler.tags = false
+handler.tags = ['false']
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
 handler.register = true
 
