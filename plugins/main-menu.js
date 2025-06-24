@@ -44,15 +44,8 @@ const defaultMenu = {
   before: `
 > 「 💫AQUI TIENES MI MENU💫 」\n
 
-›   ╔──────¤◎¤──────╗
-› ╭━❍☆𝐈𝐒𝐈𝐓𝐀𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮
-›   ╚──────¤◎¤──────╝
 ╭━─━─━─≪𖣘≫─━─━─━╮
 ┃✰ ➬ *Cliente:* %name
-┃✰ ➬ *Estrellas:* %limit
-┃✰ ➬ *Nivel:* %level [ %xp4levelup Xp Para Subir De Nivel]
-┃✰ ➬ *Xp:* %exp / %maxexp
-┃✰ ➬ *TotalXp:* %totalexp
  ╰━─━─━─≪𖣘≫─━─━─━╯
 ╔──────¤◎¤──────╗
 ┋#    🌠   *𝐈 N F O  ‹‹❑ౄ*
@@ -179,10 +172,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
    }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let pp = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp2 = 'https://i.ibb.co/9WrytGt/file.jpg'
-    let pp3 = 'https://i.ibb.co/CPVcnqH/file.jpg'
-    let pp4 = 'https://i.ibb.co/9WrytGt/file.jpg'
+    let pp = 'https://files.catbox.moe/4cvj32.jpg'
+    let pp2 = 'https://files.catbox.moe/4cvj32.jpg'
+    let pp3 = 'https://files.catbox.moe/4cvj32.jpg'
+    let pp4 = 'https://files.catbox.moe/4cvj32.jpg'
     let pp5 = 'https://i.ibb.co/CPVcnqH/file.jpg'
     let pp6 = 'https://i.ibb.co/9WrytGt/file.jpg'
     let pp7 = 'https://i.ibb.co/CPVcnqH/file.jpg'
