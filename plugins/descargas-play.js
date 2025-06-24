@@ -1,6 +1,3 @@
-// editado y adaptado por
-// https://github.com/fedelanyt130
-
 import fetch from "node-fetch"
 import yts from 'yt-search'
 import axios from "axios"
@@ -75,7 +72,7 @@ author = author || 'no encontrado'
     return m.reply(`⚠︎ Ocurrió un error: ${error}`)
   }
 }
-handler.command = handler.help = ['play']
+handler.command = handler.help = ['play', 'yta', 'ytmp3', 'play2', 'ytv', 'ytmp4', 'playaudio', 'mp4']
 handler.tags = ['descargas']
 handler.group = true
 
@@ -94,4 +91,4 @@ function formatViews(views) {
     return `${(views / 1_000).toFixed(1)}k (${views.toLocaleString()})`
   }
   return views.toString()
-            }
+     }
