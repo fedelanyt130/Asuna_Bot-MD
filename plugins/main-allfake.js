@@ -59,15 +59,15 @@ global.done = '✅'
 global.error = '✖️'
 global.msm = '⚠️'
 
-global.emoji0 = '*⚡(≧∇≦) ピカチュウ~! 🧃*\n'
-global.emoji1 = '*⚡(o≧▽ﾟ)o ピッカ〜!! 🧃*\n'
-global.emoji2 = '*⚡(✧ω✧) ピカ!! 🧃*\n'
-global.emoji3 = '*⚡(｡♥‿♥｡) ピカチュウ！🧃*\n'
-global.emoji4 = '*⚡(˘▾˘) ピィ〜カ〜！🧃*\n'
-global.emoji5 = '*⚡ᰔᩚ ( ᜊ°-° )ᜊ ピカッ！.ᐟ .ᐟ 🧃*\n'
+global.emoji0 = '*💖(≧∇≦)! 🧃*\n'
+global.emoji1 = '*💖(o≧▽ﾟ)o!! 🧃*\n'
+global.emoji2 = '*💖(✧ω✧)!! 🧃*\n'
+global.emoji3 = '*💖(｡♥‿♥｡)！🧃*\n'
+global.emoji4 = '*💖(˘▾˘) ！🧃*\n'
+global.emoji5 = '*💖ᰔᩚ ( ᜊ°-° )ᜊッ！.ᐟ .ᐟ 🧃*\n'
 global.emojis = [emoji0, emoji2, emoji3, emoji4, emoji5].getRandom()
 
-global.wait = '⚡ *Espera un momento entrenador...*'
+global.wait = '💖 *Por favor espere un momento...*'
 global.waitt = global.wait
 global.waittt = global.wait
 global.waitttt = global.wait
