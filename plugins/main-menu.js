@@ -167,7 +167,6 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
               body: dev,
               thumbnailUrl: img,
               sourceUrl: false,
-              title: 'fedelanYT',
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
