@@ -19,3 +19,14 @@ yarn install && npm install
 ```
 npm start
 ```
+
+----
+
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
+
+### **`🍭 Propietario`**
+<a
+href="https://github.com/fedelanyt130"><img src="https://github.com/fedelanyt130.png" width="130" height="130" alt="
+FedelanYT"/></a>
