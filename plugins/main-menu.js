@@ -163,7 +163,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
           },
           forwardingScore: 999,
           externalAdReply: {
-              title: 'ASUNABOT-Al\nASUNABOT-Al NUEVA VERSION 🍀',
+              title: textbot,
               body: dev,
               thumbnailUrl: img,
               sourceUrl: false,
