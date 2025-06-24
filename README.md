@@ -1,9 +1,8 @@
 <img src= "https://files.catbox.moe/eyxsoy.jpg">
     </p>
 
-     <p 
   <a href="https://wa.me/5491156178758">
-    <img title="Autor" src="https://img.shields.io/badge/CARLOS OFC-black?style=for-the-badge&logo=whatsapp">
+    <img title="Autor" src="https://img.shields.io/badge/FedelanYT-black?style=for-the-badge&logo=whatsapp">
   </a>
   
 <!-- RAINBOW LINE BOT -->
