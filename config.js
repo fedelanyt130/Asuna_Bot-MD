@@ -50,7 +50,7 @@ global.packname = '🍀 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
 global.botname = '💖 ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ⚘';
 global.wm = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
 global.dev = '© ᴄʀᴇᴀᴅᴏ x ꜰᴇᴅᴇ ⚘';
-global.textbot = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ  • ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜰᴇᴅᴇʟᴀɴʏ';
+global.textbot = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ  • ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜰᴇᴅᴇ 🍬';
 global.etiqueta = 'ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ ✨';
 
 // 💰 MONEDA Y AVATARES
