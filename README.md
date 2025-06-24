@@ -26,7 +26,8 @@ npm start
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
-### **`🍭 Propietario`**
-<a
-href="https://github.com/fedelanyt130"><img src="https://github.com/fedelanyt130.png" width="130" height="130" alt="
-FedelanYT"/></a>
+## `💖 Creador del bot`
+
+<a href="https://github.com/fedelanyt130">
+  <img src="https://github.com/fedelanyt130" width="250" height="250" alt="fedelanyt130"/>
+</a>
