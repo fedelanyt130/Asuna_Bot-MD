@@ -1,7 +1,15 @@
 <img src= "https://files.catbox.moe/eyxsoy.jpg">
     </p>
 
+     <p align="center">
+  <a href="https://wa.me/525544876071">
+    <img title="Autor" src="https://img.shields.io/badge/CARLOS OFC-black?style=for-the-badge&logo=whatsapp">
+  </a>
+  
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
+  
 ## ⚘ `INSTALACIÓN X TERMUX`
 
 ```
