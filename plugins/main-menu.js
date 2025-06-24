@@ -157,17 +157,16 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
           mentionedJid: [m.sender],
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-              newsletterJid: false,
+              newsletterJid: channelRD.id,
               newsletterName: channelRD.name,
               serverMessageId: -1,
           },
           forwardingScore: 999,
           externalAdReply: {
-              title: textbot,
+              title: 'ASUNABOT-Al\nASUNABOT-Al NUEVA VERSION 🍀',
               body: dev,
               thumbnailUrl: img,
               sourceUrl: false,
-              thumbnailUrl: perfil'
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
