@@ -167,6 +167,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
               body: dev,
               thumbnailUrl: img,
               sourceUrl: false,
+              thumbnailUrl: perfil
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
@@ -180,7 +181,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
   }
 }
 handler.help = ['menu']
-handler.tags = ['false']
+handler.tags = ['main']
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
 handler.register = true
 
