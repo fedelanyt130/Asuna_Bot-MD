@@ -36,7 +36,7 @@ const defaultMenu = {
 ୧❒༉ *Baileys:* Multi Device
 ୧❒༉ *Tiempo Activo:* %muptime
 ୧❒༉ *Usuarios:* %totalreg 
-୧❒༉ *Comandos:* ${totalCommands}
+୧❒༉ *Comandos:* %totalCommands
 
 %readmore
 \t*(✰◠‿◠) ᴀꜱᴜɴᴀʙᴏᴛ-ᴀʟ*   
