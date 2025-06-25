@@ -151,21 +151,21 @@ await m.react(emojis)
 
 let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
 
-  await conn.sendMessage(m.chat, {
-      video: { url: 'https://files.catbox.moe/ks0qz0.mp4', gifPlayback: true },
+  await conn.sendMessage(m.chat, { 
       text: text.trim(),
       contextInfo: {
           mentionedJid: [m.sender],
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-              newsletterJid: false,
-              newsletterName: false,
+              newsletterJid: channelRD.id,
+              newsletterName: channelRD.name,
               serverMessageId: -1,
           },
           forwardingScore: 999,
           externalAdReply: {
               title: textbot,
               body: dev,
+              thumbnailUrl: img,
               sourceUrl: false,
               mediaType: 1,
               showAdAttribution: true,
