@@ -165,7 +165,7 @@ let img = 'https://files.catbox.moe/4cvj32.jpg'; // valiendo vrg con los links
           externalAdReply: {
               title: textbot,
               body: dev,
-              thumbnailUrl: img,
+              video: { url: 'https://files.catbox.moe/ks0qz0.mp4', gifPlayback: true },
               sourceUrl: false,
               mediaType: 1,
               showAdAttribution: true,
